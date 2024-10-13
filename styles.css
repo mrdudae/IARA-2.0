@@ -11,41 +11,33 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Tema escuro */
 body.dark {
-    background-color: #121212;
-    color: white;
+    background-color: #121212; /* Cor de fundo do tema escuro */
+    color: white; /* Cor do texto do tema escuro */
 }
 
-.navbar {
-    background-color: rgb(69, 142, 172);
+.theme-toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
 }
 
-.footer {
-    background-color: rgb(69, 142, 172);
-}
-
-/* Estilos para tema escuro */
-body.dark .navbar {
-    background-color: #1e1e1e;
-}
-
-body.dark .footer {
-    background-color: #1e1e1e;
-}
-
-body.dark .nav-button,
-body.dark .action-button {
+#theme-toggle {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
     background-color: rgb(69, 142, 172);
     color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 24px; /* Aumentando o tamanho do ícone */
 }
 
-body.dark .nav-button:hover,
-body.dark .action-button:hover {
+#theme-toggle:hover {
     background-color: rgba(69, 142, 172, 0.8);
 }
-
-/* Mantenha os outros estilos como estão */
 
 .navbar {
     display: flex;
@@ -68,12 +60,13 @@ body.dark .action-button:hover {
 
 .logo {
     width: 100px; /* Largura da logo */
-    margin-right: 20px; /* Espaço entre logo e botões */
+    margin-right: 60px; /* Espaço entre logo e botões */
 }
 
 .nav-buttons {
     display: flex;
     gap: 10px;
+    margin-left: 15%;
 }
 
 .nav-button {
@@ -201,21 +194,23 @@ body.dark .action-button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 2s;
 }
-
 .animated-list {
     opacity: 0;
     animation: fadeIn 2.2s forwards;
 }
 
 .section-image {
-    max-width: 100%;
+    max-width: 20%;
     height: auto;
     border-radius: 5px;
-    margin: 15px 0;
+    margin: 15px auto; /* Muda o margin para auto */
+    display: block; /* Faz a imagem ser um bloco */
     animation: slideIn 0.5s forwards;
 }
-/* Estilos existentes... */
 
+.animated-text{
+    font-size: 20px;
+}
 /* Estilo para a seção da equipe */
 .team-section {
     padding: 20px;

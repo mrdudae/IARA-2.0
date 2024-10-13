@@ -9,19 +9,16 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <img src="logo-url" alt="Logo do Projeto" class="logo">
+            <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
             <div class="nav-buttons">
-                <button class="nav-button" onclick="scrollToSection('sobre')">Sobre</button>
+                <button class="nav-button" onclick="scrollToSection('sobre')">Home</button>
                 <button class="nav-button" onclick="scrollToSection('cadastre')">Cadastre-se</button>
                 <button class="nav-button" onclick="scrollToSection('voluntario')">Seja Nosso Voluntário</button>
                 <button class="nav-button" onclick="scrollToSection('entre')">Entre</button>
-                <button class="nav-button" onclick="scrollToSection('sla')">SLA</button>
+                <button class="nav-button" onclick="scrollToSection('sla')">sobre</button>
             </div>
         </div>
     </nav>
-    <div class="theme-toggle-container">
-        <button id="theme-toggle">Alternar Tema</button>
-    </div>
     
     <header class="hero-section">
         <div class="hero-content">
@@ -31,6 +28,7 @@
     </header>
 
     <div class="buttons-container">
+        
         <div class="button-step">
             <h3 class="animated-subtitle">Título 1</h3>
             <p class="animated-text">Descrição do primeiro botão de apoio e proteção.</p>
@@ -52,7 +50,14 @@
             <button class="action-button">Ação 4</button>
         </div>
     </div>
-
+    <div class="theme-toggle-container">
+        <button id="theme-toggle">
+            <span id="theme-icon">🌞</span> <!-- Ícone inicial como sol -->
+        </button>
+    </div>
+    
+    </div>
+    
     <section id="leis" class="laws-section">
         <h2 class="animated-title">Leis de Proteção às Mulheres</h2>
         <img src="image-url" alt="Leis de Proteção" class="section-image">
@@ -66,17 +71,17 @@
 
     <section id="sobre" class="info-section">
         <h2 class="animated-title">Sobre o Projeto</h2>
-        <img src="image-url" alt="Sobre o Projeto" class="section-image">
+        <img src="imagens/logo favicon (4).png" alt="Sobre o Projeto" class="section-image">
         <p class="animated-text">Nosso projeto visa oferecer apoio emocional, psicológico e jurídico a pessoas vítimas de violência. Trabalhamos para criar um ambiente seguro e acolhedor, promovendo a conscientização sobre os direitos das vítimas.</p>
     </section>
 
     <section id="equipe" class="team-section">
-        <h2 class="animated-title">Nossa Equipe</h2>
+        <h2 class="animated-title">Nossa Equipe:</h2><br><br>
         <div class="team-members">
             <div class="team-member">
-                <img src="member1-image-url" alt="Membro 1" class="member-photo">
-                <h3>Membro 1</h3>
-                <p>Descrição do membro 1.</p>
+                <img src="imagens/eut.jpg" alt="Membro 1" class="member-photo">
+                <h3>Eduarda Oliveira</h3>
+                <p>Tenho 17 anos e faço parte da equipe IARA</p>
             </div>
             <div class="team-member">
                 <img src="member2-image-url" alt="Membro 2" class="member-photo">
@@ -94,7 +99,7 @@
                 <p>Descrição do membro 4.</p>
             </div>
         </div>
-        <div class="team-animation">Animação em desenvolvimento...</div>
+        <div class="team-animation"></div>
     </section>
 
     <footer class="footer">
@@ -111,5 +116,6 @@
     
 
     <script src="script.js"></script>
+    <script src="tema.js"></script>
 </body>
 </html>
