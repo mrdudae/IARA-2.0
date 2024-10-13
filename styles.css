@@ -182,7 +182,11 @@ body.dark {
 .button-step:hover {
     transform: translateY(-5px);
 }
-
+.button-icon {
+    width: 20%; /* Ajuste o tamanho conforme necessário */
+    height: 200px;
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o título */
+}
 .info-section,
 .team-section,
 .laws-section {
