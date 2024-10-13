@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto IARA - Apoio e Proteção</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="logo-url" alt="Logo do Projeto" class="logo">
+            <div class="nav-buttons">
+                <button class="nav-button" onclick="scrollToSection('sobre')">Sobre</button>
+                <button class="nav-button" onclick="scrollToSection('cadastre')">Cadastre-se</button>
+                <button class="nav-button" onclick="scrollToSection('voluntario')">Seja Nosso Voluntário</button>
+                <button class="nav-button" onclick="scrollToSection('entre')">Entre</button>
+                <button class="nav-button" onclick="scrollToSection('sla')">SLA</button>
+            </div>
+        </div>
+    </nav>
+    <div class="theme-toggle-container">
+        <button id="theme-toggle">Alternar Tema</button>
+    </div>
+    
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="animated-title">Bem-vindo ao Projeto IARA</h1>
+            <p class="animated-description">Apoio e proteção a pessoas vítimas de violência.</p>
+        </div>
+    </header>
+
+    <div class="buttons-container">
+        <div class="button-step">
+            <h3 class="animated-subtitle">Título 1</h3>
+            <p class="animated-text">Descrição do primeiro botão de apoio e proteção.</p>
+            <button class="action-button">Ação 1</button>
+        </div>
+        <div class="button-step">
+            <h3 class="animated-subtitle">Título 2</h3>
+            <p class="animated-text">Descrição do segundo botão de apoio e proteção.</p>
+            <button class="action-button">Ação 2</button>
+        </div>
+        <div class="button-step">
+            <h3 class="animated-subtitle">Título 3</h3>
+            <p class="animated-text">Descrição do terceiro botão de apoio e proteção.</p>
+            <button class="action-button">Ação 3</button>
+        </div>
+        <div class="button-step">
+            <h3 class="animated-subtitle">Título 4</h3>
+            <p class="animated-text">Descrição do quarto botão de apoio e proteção.</p>
+            <button class="action-button">Ação 4</button>
+        </div>
+    </div>
+
+    <section id="leis" class="laws-section">
+        <h2 class="animated-title">Leis de Proteção às Mulheres</h2>
+        <img src="image-url" alt="Leis de Proteção" class="section-image">
+        <p class="animated-text">Existem várias leis que garantem a proteção das mulheres no Brasil, incluindo a Lei Maria da Penha e a Lei do Feminicídio. Essas leis visam coibir a violência e garantir os direitos das vítimas.</p>
+        <ul class="animated-list">
+            <li><strong>Lei Maria da Penha:</strong> Lei nº 11.340/2006, que visa coibir a violência doméstica e familiar contra a mulher.</li>
+            <li><strong>Lei do Feminicídio:</strong> Lei nº 13.104/2015, que altera o Código Penal para incluir o feminicídio como uma qualificadora do homicídio.</li>
+            <li><strong>Outras Leis:</strong> Existem também leis que garantem direitos em áreas como saúde, educação e trabalho.</li>
+        </ul>
+    </section>
+
+    <section id="sobre" class="info-section">
+        <h2 class="animated-title">Sobre o Projeto</h2>
+        <img src="image-url" alt="Sobre o Projeto" class="section-image">
+        <p class="animated-text">Nosso projeto visa oferecer apoio emocional, psicológico e jurídico a pessoas vítimas de violência. Trabalhamos para criar um ambiente seguro e acolhedor, promovendo a conscientização sobre os direitos das vítimas.</p>
+    </section>
+
+    <section id="equipe" class="team-section">
+        <h2 class="animated-title">Nossa Equipe</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="member1-image-url" alt="Membro 1" class="member-photo">
+                <h3>Membro 1</h3>
+                <p>Descrição do membro 1.</p>
+            </div>
+            <div class="team-member">
+                <img src="member2-image-url" alt="Membro 2" class="member-photo">
+                <h3>Membro 2</h3>
+                <p>Descrição do membro 2.</p>
+            </div>
+            <div class="team-member">
+                <img src="member3-image-url" alt="Membro 3" class="member-photo">
+                <h3>Membro 3</h3>
+                <p>Descrição do membro 3.</p>
+            </div>
+            <div class="team-member">
+                <img src="member4-image-url" alt="Membro 4" class="member-photo">
+                <h3>Membro 4</h3>
+                <p>Descrição do membro 4.</p>
+            </div>
+        </div>
+        <div class="team-animation">Animação em desenvolvimento...</div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Projeto IARA. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="privacy-notification" id="privacy-notification">
+        <div class="notification-header"></div>
+        <p>Aceita a política de privacidade?</p>
+        <p>Ao aceitar, você concorda com o uso dos seus dados para oferecer um melhor atendimento e suporte.</p>
+        <button onclick="acceptPrivacy()">Aceitar</button>
+        <button onclick="rejectPrivacy()">Rejeitar</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
