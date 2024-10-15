@@ -15,6 +15,54 @@ body.dark {
     background-color: #121212; /* Cor de fundo do tema escuro */
     color: white; /* Cor do texto do tema escuro */
 }
+body.dark-theme {
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+}
+
+.navbar.dark-theme {
+    background-color: #1f1f1f; /* Cor de fundo da navbar */
+}
+.buttons-container.dark-theme {
+    background-color: #1f1f1f; /* Cor de fundo dos botões */
+}
+
+.laws-section.dark-theme,
+.info-section.dark-theme,
+.team-section.dark-theme {
+    background-color: #1f1f1f; /* Cor de fundo das seções */
+}
+
+.footer.dark-theme {
+    background-color: #1f1f1f; /* Cor de fundo do rodapé */
+}
+
+.button-step {
+    background-color: #ffffff; /* Cor de fundo padrão */
+    color: #000000; /* Texto padrão */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-step.dark-theme {
+    background-color: #333333; /* Cor de fundo no tema escuro */
+    color: #ffffff; /* Texto claro no tema escuro */
+    border: 1px solid #444; /* Borda para contraste */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    /* Cor padrão */
+    background-color: #ffffff; /* Cor de fundo padrão */
+}
+
+.buttons-container.dark-theme {
+    background-color: #1f1f1f; /* Cor de fundo do contêiner no tema escuro */
+}
 
 .theme-toggle-container {
     position: fixed;
@@ -148,6 +196,46 @@ body.dark {
     transition: transform 0.3s;
     text-align: center;
     animation: fadeIn 1.5s;
+}
+.links-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.links-container {
+    display: flex;
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    scroll-behavior: smooth; /* Suaviza a rolagem */
+    padding: 10px 0;
+}
+
+.link-item {
+    min-width: 200px; /* Largura mínima do item */
+    margin: 0 10px; /* Espaçamento entre os itens */
+    padding: 20px;
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.link-item a {
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.arrows-container {
+    display: flex; /* Alinha as setas em linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 10px; /* Espaçamento acima das setas */
+}
+
+.scroll-arrow {
+    cursor: pointer;
+    font-size: 24px; /* Tamanho do ícone */
+    background:  rgb(69, 142, 172); /* Cor do círculo */
+    color: white; /* Cor do ícone */
+    border-radius: 50%; /* Arredonda as setas */
+    padding: 10px; /* Espaçamento interno */
+    margin: 0 10px; /* Espaçamento entre as setas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 .animated-subtitle {
