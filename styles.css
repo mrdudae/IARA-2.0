@@ -12,29 +12,29 @@ body {
 }
 
 body.dark {
-    background-color: #121212; /* Cor de fundo do tema escuro */
-    color: white; /* Cor do texto do tema escuro */
+    background-color: rgb(35, 78, 94); 
+    color: white; 
 }
 body.dark-theme {
-    background-color: #121212; /* Fundo escuro */
-    color: #ffffff; /* Texto claro */
+    background-color: rgb(42, 70, 82);
+    color: #ffffff; 
 }
 
 .navbar.dark-theme {
-    background-color: #1f1f1f; /* Cor de fundo da navbar */
+    background-color: rgb(6, 23, 29); 
 }
 .buttons-container.dark-theme {
-    background-color: #1f1f1f; /* Cor de fundo dos botões */
+    background-color: rgb(6, 23, 29); 
 }
 
 .laws-section.dark-theme,
 .info-section.dark-theme,
 .team-section.dark-theme {
-    background-color: #1f1f1f; /* Cor de fundo das seções */
+    background-color: rgb(6, 23, 29);
 }
 
 .footer.dark-theme {
-    background-color: #1f1f1f; /* Cor de fundo do rodapé */
+    background-color: rgb(6, 23, 29); /* Cor de fundo do rodapé */
 }
 
 .button-step {
@@ -47,7 +47,7 @@ body.dark-theme {
 }
 
 .button-step.dark-theme {
-    background-color: #333333; /* Cor de fundo no tema escuro */
+    background-color: rgb(6, 23, 29); /* Cor de fundo no tema escuro */
     color: #ffffff; /* Texto claro no tema escuro */
     border: 1px solid #444; /* Borda para contraste */
 }
@@ -56,12 +56,11 @@ body.dark-theme {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    /* Cor padrão */
-    background-color: #ffffff; /* Cor de fundo padrão */
+    background-color: #ffffff; 
 }
 
 .buttons-container.dark-theme {
-    background-color: #1f1f1f; /* Cor de fundo do contêiner no tema escuro */
+    background-color: rgb(27, 72, 86); /* Cor de fundo do contêiner no tema escuro */
 }
 
 .theme-toggle-container {
@@ -217,8 +216,9 @@ body.dark-theme {
 }
 
 .link-item a {
-    text-decoration: none; /* Remove sublinhado */
-    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; 
+    font-weight: bold; 
+    color:rgb(69, 142, 172) ;
 }
 
 .arrows-container {
@@ -435,4 +435,111 @@ a {
   a:hover, a:focus {
     color: inherit; 
     text-decoration: none;
+}
+
+/* Estilo do ícone de menu */
+.menu-icon {
+    display: none; /* Oculta o ícone por padrão */
+    cursor: pointer; /* Cursor de pointer para o ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    margin-left: auto; /* Mover para a extremidade direita */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Muda a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .nav-buttons {
+        margin-left: 0; /* Remove a margem esquerda */
+        flex-direction: column; /* Muda a direção para coluna */
+    }
+
+    .link-item {
+        min-width: 150px; /* Reduz a largura mínima dos itens */
+        margin: 10px 0; /* Ajusta o espaçamento */
+    }
+
+    .button-step {
+        width: 100%; /* Botões ocupam 100% da largura */
+        margin: 5px 0; /* Ajusta a margem */
+    }
+
+    .team-member {
+        width: 100%; /* Cada membro ocupa 100% em telas menores */
+        margin-bottom: 20px;
+    }
+
+    .section-image {
+        max-width: 80%; /* Aumenta a largura da imagem em telas menores */
+    }
+
+    .hero-section {
+        padding: 30px 10px; /* Reduz o padding em telas menores */
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .navbar-container {
+        flex-direction: row; /* Mantém a direção em linha */
+        justify-content: space-between; /* Espaço entre itens */
+    }
+
+    .link-item {
+        min-width: 180px; /* Ajusta a largura mínima dos itens */
+    }
+
+    .team-member {
+        width: 45%; /* Dois membros em linha */
+    }
+}
+/* Estilo do ícone de menu */
+.menu-icon {
+    display: none; /* Oculta o ícone por padrão */
+    cursor: pointer; /* Cursor de pointer para o ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    margin-left: auto; /* Mover para a extremidade direita */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-buttons {
+        display: none; /* Oculta os botões de navegação por padrão */
+        flex-direction: column; /* Os botões serão empilhados */
+        position: absolute; /* Posição absoluta para sobrepor */
+        top: 60px; /* Ajusta a posição abaixo do navbar */
+        right: 20px; /* Margem à direita */
+        background-color: rgb(69, 142, 172); /* Cor de fundo */
+        border-radius: 5px; /* Bordas arredondadas */
+        width: 200px; /* Largura fixa */
+        z-index: 100; /* Acima de outros elementos */
+    }
+
+    .nav-buttons.active {
+        display: flex; /* Mostra os botões se ativo */
+    }
+
+    .menu-icon {
+        display: block; /* Mostra o ícone em dispositivos móveis */
+    }
+}
+/* Estilos gerais do botão de alternância de tema */
+.theme-toggle-container {
+    position: fixed; /* Fixo na tela */
+    top: 20px; /* Posição no topo */
+    right: 20px; /* Posição à direita */
+    z-index: 20; /* Acima de outros elementos */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .theme-toggle-container {
+        top: 80px; /* Move para baixo em relação ao navbar */
+        right: 20px; /* Mantém à direita */
+    }
 }

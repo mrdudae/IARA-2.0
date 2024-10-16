@@ -1,3 +1,5 @@
+
+                    // JS para parte darck do site
 document.getElementById("theme-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-theme");
     
@@ -10,6 +12,8 @@ document.getElementById("theme-toggle").addEventListener("click", function() {
     const themeIcon = document.getElementById("theme-icon");
     themeIcon.textContent = document.body.classList.contains("dark-theme") ? "🌜" : "🌞"; // Muda o ícone
 });
+
+                // JS para movimentação do blog
 function scrollLinks(direction) {
     const container = document.querySelector('.links-container');
     const scrollAmount = 200; // Quantidade a ser rolada
@@ -20,3 +24,10 @@ function scrollLinks(direction) {
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
 }
+             // js para navbar modo celular
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+    const navButtons = document.getElementById('nav-buttons');
+    navButtons.classList.toggle('active'); // Alterna a classe "active"
+});
+
