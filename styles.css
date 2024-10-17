@@ -196,29 +196,75 @@ body.dark-theme {
     text-align: center;
     animation: fadeIn 1.5s;
 }
-.links-section {
+/* Noticias css */
+
+.links-section { 
+    padding: 20px;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espaço abaixo das setas */
+}
+
+.nav-button {
+    background-color: rgb(69, 142, 172);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.links-section { 
     padding: 20px;
     text-align: center;
 }
 
 .links-container {
     display: flex;
-    overflow-x: auto; /* Permite a rolagem horizontal */
+    overflow-x: auto; /* Permite rolagem horizontal */
     scroll-behavior: smooth; /* Suaviza a rolagem */
     padding: 10px 0;
 }
 
 .link-item {
-    min-width: 200px; /* Largura mínima do item */
-    margin: 0 10px; /* Espaçamento entre os itens */
-    padding: 20px;
+    min-width: 250px; /* Largura mínima do item */
+    min-height: 350px; /* Altura mínima do item */
+    margin: 10px; /* Espaçamento entre os itens */
     border-radius: 5px; /* Bordas arredondadas */
+    border: 2px solid rgba(69, 142, 172, 0.5); /* Borda com cor e transparência */
+    text-align: center; /* Centraliza o texto */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 .link-item a {
-    text-decoration: none; 
-    font-weight: bold; 
-    color:rgb(69, 142, 172) ;
+    display: flex; /* Usar flex para empilhar a imagem e o texto */
+    flex-direction: column; /* Empilha a imagem e o texto verticalmente */
+    text-decoration: none; /* Remove sublinhado do link */
+    color: inherit; /* Herda a cor do pai */
+    padding: 0; /* Remove padding para ajustar */
+    height: 100%; /* Ocupa toda a altura do container */
+}
+
+.link-image {
+    width: 100%; /* Imagem ocupa toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px 5px 0 0; /* Bordas arredondadas apenas no topo */
+}
+
+.link-item h3,
+.link-item p {
+    margin: 10px 0; /* Espaçamento entre o título e o parágrafo */
+}
+
+.link-item:hover {
+    background-color: rgba(69, 142, 172, 0.1); /* Efeito de hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
 }
 
 .arrows-container {
