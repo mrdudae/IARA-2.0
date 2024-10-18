@@ -84,7 +84,7 @@ ion-icon{
 .input-container button:hover {
     background-color:  rgb(53, 109, 131);
 }
-/* Media Queries para Responsividade */
+
 @media (max-width: 600px) {
     .input-container input {
         font-size: 14px;
