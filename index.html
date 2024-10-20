@@ -12,14 +12,14 @@
         <div class="navbar-container">
             <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
             <div class="menu-icon" id="menu-icon">
-                <i class="fas fa-bars"></i> 
+                <i class="fas fa-bars"></i> <!-- Ícone de menu -->
             </div>
             <div class="nav-buttons" id="nav-buttons">
                 <button class="nav-button" onclick="scrollToSection('sobre')">Home</button>
-                <button class="nav-button" onclick="scrollToSection('cadastre')"><a href="user/formulário.html">Suporte</a></button>
-                <button class="nav-button" onclick="scrollToSection('voluntario')">Feedback</button>
-                <button class="nav-button" onclick="scrollToSection('entre')"><a href="user/login.html">Cadastra-se</a></button>
-                <button class="nav-button" onclick="scrollToSection('sla')"><a href="#sobre">Login</a></button>
+                <button class="nav-button" onclick="scrollToSection('voluntario')"><a href="feedback.html">Feedback</button></a>
+                <button id="login" class="nav-button" onclick="scrollToSection('sla')"><a href="#sobre">Sobre</a></button>
+                <button id="cadastra-se" class="nav-button" onclick="scrollToSection('entre')"><a href="user/formulário.html">Cadastra-se</a></button>
+                <button id="cadastra-se" class="nav-button" onclick="scrollToSection('entre')"><a href="user/login.html">Login</a></button>
             </div>
         </div>
     </nav>
@@ -37,7 +37,7 @@
             <img src="" alt="Ícone de Chat" class="button-icon">
             <h3 class="animated-subtitle">Chat</h3>
             <p class="animated-text">Descrição do primeiro botão de apoio e proteção.</p><br>
-            <button href="chat.html" class="action-button">Chat</button>
+           <a href="tela-chat.html"><button class="action-button">Chat</button></a> 
         </div>
         <div class="button-step">
             <img src="path/to/support-locations-icon.png" alt="Ícone de Locais de Apoio" class="button-icon">
@@ -189,6 +189,5 @@
     
 
     <script src="script.js"></script>
-    <script src="tema.js"></script>
 </body>
 </html>

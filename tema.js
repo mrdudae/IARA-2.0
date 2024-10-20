@@ -1,17 +1,16 @@
-let isDarkMode = false;
+document.getElementById("theme-toggle").addEventListener("click", function() {
+    // Alterna a classe "dark-theme" no body
+    document.body.classList.toggle("dark-theme");
 
-document.getElementById('theme-toggle').addEventListener('click', function() {
-    isDarkMode = !isDarkMode; // Alterna entre true e false
+    // Seleciona todos os elementos que devem ter a classe "dark-theme" adicionada/alternada
+    const elements = document.querySelectorAll('.navbar, .header-container, header, main, p, button, .button-description');
 
-    const body = document.body;
-    const themeIcon = document.getElementById('theme-icon');
+    // Alterna a classe "dark-theme" em todos os elementos selecionados
+    elements.forEach(element => {
+        element.classList.toggle("dark-theme");
+    });
 
-    if (isDarkMode) {
-        body.classList.add('dark'); // Adiciona a classe para tema escuro
-        themeIcon.textContent = '🌙'; // Muda o ícone para lua
-    } else {
-        body.classList.remove('dark'); // Remove a classe para tema escuro
-        themeIcon.textContent = '🌞'; // Muda o ícone para sol
-    }
+    // Alterna o ícone entre sol e lua
+    const themeIcon = document.getElementById("theme-icon");
+    themeIcon.textContent = document.body.classList.contains("dark-theme") ? "🌜" : "🌞"; // Muda o ícone
 });
-console.log("Script carregado");

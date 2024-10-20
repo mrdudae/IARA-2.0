@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça a IARA</title>
+    <link rel="stylesheet" href="tela-chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+                <div class="menu-icon" id="menu-icon">
+                    <i class="fas fa-bars"></i> 
+                </div>
+                <div class="nav-buttons" id="nav-buttons">
+                    <button class="nav-button" onclick="scrollToSection('sobre')">Home</button>
+                    <button class="nav-button" onclick="scrollToSection('cadastre')"><a>politica de privacidae</a></button>
+                    <button class="nav-button" onclick="scrollToSection('voluntario')">contato</button>
+
+                </div>
+            </div>
+        </nav>
+        <div class="theme-toggle-container">
+            <button id="theme-toggle">
+                <span id="theme-icon">🌞</span> 
+            </button>
+        </div>
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="animated-title">Bem-vindo ao chat!</h1>
+            </div>
+        </header>
+    
+        <main>
+            <p>
+                IARA é uma plataforma inovadora de suporte psicológico, onde você pode interagir com profissionais capacitados. 
+                Para mais informações, consulte nossa <a href="#">Política de Privacidade</a>.
+            </p>
+            <a href="chat.html">
+                <button id="chatbutton">Siga para o Chat <span class="arrow">></span></button>
+            </a>
+            <p class="button-description">Clique aqui para iniciar uma conversa com um de nossos especialistas.</p>
+    
+            <a href="agendar.html">
+                <button id="chatbutton">Agendar com Psicólogo <span class="arrow">></span></button>
+            </a>
+            <p class="button-description">Marque uma sessão com um profissional de sua escolha.</p>
+        </main>
+
+    <script src="tela-chat.js"></script>
+    <script src="tema.js" ></script>
+</body>
+</html>

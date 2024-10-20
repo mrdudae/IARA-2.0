@@ -19,7 +19,9 @@ body.dark-theme {
     background-color: rgb(42, 70, 82);
     color: #ffffff; 
 }
-
+.nav-button.dark-theme{
+    background-color: rgb(6, 23, 29); 
+}
 .navbar.dark-theme {
     background-color: rgb(6, 23, 29); 
 }
@@ -559,7 +561,7 @@ a {
         flex-direction: column; /* Os botões serão empilhados */
         position: absolute; /* Posição absoluta para sobrepor */
         top: 60px; /* Ajusta a posição abaixo do navbar */
-        right: 30px; /* Margem à direita */
+        right: 20px; /* Margem à direita */
         background-color: rgb(69, 142, 172); /* Cor de fundo */
         border-radius: 5px; /* Bordas arredondadas */
         width: 200px; /* Largura fixa */
@@ -577,7 +579,7 @@ a {
 /* Estilos gerais do botão de alternância de tema */
 .theme-toggle-container {
     position: fixed; /* Fixo na tela */
-    top: 200px; /* Posição no topo */
+    top: 20px; /* Posição no topo */
     right: 20px; /* Posição à direita */
     z-index: 20; /* Acima de outros elementos */
 }
@@ -585,7 +587,7 @@ a {
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     .theme-toggle-container {
-        top: 650px; /* Move para baixo em relação ao navbar */
+        top: 80px; /* Move para baixo em relação ao navbar */
         right: 20px; /* Mantém à direita */
     }
 }
