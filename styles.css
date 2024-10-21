@@ -90,7 +90,6 @@ body.dark-theme {
 
 .navbar {
     display: flex;
-    justify-content: center;
     background-color: rgb(69, 142, 172);
     padding: 10px 0;
     position: sticky;
@@ -115,7 +114,7 @@ body.dark-theme {
 .nav-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .nav-button {
@@ -128,6 +127,7 @@ body.dark-theme {
     transition: color 0.3s;
     font-size: 16px;
     position: relative;
+    margin-right: 5%;
 }
 
 .nav-button::after {
@@ -494,100 +494,83 @@ a {
     margin-left: auto; /* Mover para a extremidade direita */
 }
 
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column; /* Muda a direção para coluna */
-        align-items: center; /* Centraliza os itens */
-    }
-
-    .nav-buttons {
-        margin-left: 0; /* Remove a margem esquerda */
-        flex-direction: column; /* Muda a direção para coluna */
-    }
-
-    .link-item {
-        min-width: 150px; /* Reduz a largura mínima dos itens */
-        margin: 10px 0; /* Ajusta o espaçamento */
-    }
-
-    .button-step {
-        width: 100%; /* Botões ocupam 100% da largura */
-        margin: 5px 0; /* Ajusta a margem */
-    }
-
-    .team-member {
-        width: 100%; /* Cada membro ocupa 100% em telas menores */
-        margin-bottom: 20px;
-    }
-
-    .section-image {
-        max-width: 80%; /* Aumenta a largura da imagem em telas menores */
-    }
-
-    .hero-section {
-        padding: 30px 10px; /* Reduz o padding em telas menores */
-    }
+/* Estilos da navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(69, 142, 172);
+    padding: 10px 0;
 }
 
-/* Estilos para tablets */
-@media (max-width: 1024px) {
-    .navbar-container {
-        flex-direction: row; /* Mantém a direção em linha */
-        justify-content: space-between; /* Espaço entre itens */
-    }
-
-    .link-item {
-        min-width: 180px; /* Ajusta a largura mínima dos itens */
-    }
-
-    .team-member {
-        width: 45%; /* Dois membros em linha */
-    }
-}
-/* Estilo do ícone de menu */
+/* Estilo do ícone do menu */
 .menu-icon {
     display: none; /* Oculta o ícone por padrão */
-    cursor: pointer; /* Cursor de pointer para o ícone */
+    cursor: pointer;
     font-size: 24px; /* Tamanho do ícone */
     color: white; /* Cor do ícone */
     margin-left: auto; /* Mover para a extremidade direita */
 }
 
-/* Estilos para dispositivos móveis */
+/* Responsividade */
 @media (max-width: 768px) {
     .nav-buttons {
-        display: none; /* Oculta os botões de navegação por padrão */
-        flex-direction: column; /* Os botões serão empilhados */
-        position: absolute; /* Posição absoluta para sobrepor */
-        top: 60px; /* Ajusta a posição abaixo do navbar */
-        right: 20px; /* Margem à direita */
-        background-color: rgb(69, 142, 172); /* Cor de fundo */
-        border-radius: 5px; /* Bordas arredondadas */
-        width: 200px; /* Largura fixa */
-        z-index: 100; /* Acima de outros elementos */
+        display: none; /* Oculta os botões padrão */
     }
-
-    .nav-buttons.active {
-        display: flex; /* Mostra os botões se ativo */
-    }
-
+    
     .menu-icon {
-        display: block; /* Mostra o ícone em dispositivos móveis */
+        display: block; /* Exibe o ícone de menu em dispositivos móveis */
+    }
+
+    .nav-buttons.show {
+        display: flex; /* Mostra os botões quando necessário */
+        flex-direction: column; /* Coloca os botões em coluna */
+        position: absolute; /* Permite sobreposição */
+        background-color: rgb(69, 142, 172); /* Cor do fundo */
+        top: 50px; /* Distância do ícone */
+        right: 50px; /* Alinha à direita */
+        border-radius: 5px; /* Bordas arredondadas */
+        z-index: 10; /* Coloca na frente */
+    }
+
+    .nav-button {
+        width: 80%; /* Botões ocupam toda a largura */
+        padding: 10px; /* Ajusta o padding */
+        border: none; /* Remove borda */
+        background: transparent; /* Fundo transparente */
+        color: white; /* Cor do texto */
+        text-align: left; /* Alinha texto à esquerda */
+        transition: background-color 0.3s; /* Transição suave */
+    }
+
+    .nav-button:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Efeito de hover */
     }
 }
-/* Estilos gerais do botão de alternância de tema */
-.theme-toggle-container {
-    position: fixed; /* Fixo na tela */
-    top: 20px; /* Posição no topo */
-    right: 20px; /* Posição à direita */
-    z-index: 20; /* Acima de outros elementos */
+/* Para telas menores, os botões ficam lado a lado */
+@media (max-width: 768px) {
+    .buttons-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .button-step {
+        width: 48%; /* Ajusta a largura para que dois botões caibam lado a lado */
+        margin: 5px 0; /* Ajusta as margens */
+    }
 }
 
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-    .theme-toggle-container {
-        top: 80px; /* Move para baixo em relação ao navbar */
-        right: 20px; /* Mantém à direita */
-    }
+/* Ajustes no ícone do tema para ficar fixo */
+.theme-toggle-container {
+    position: fixed;
+    bottom: 20px; /* Ajusta para ficar na parte inferior */
+    right: 20px; /* Alinhado à direita */
+    z-index: 20;
+}
+/* Ajustes para o botão de alternância do tema */
+#theme-toggle {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 17px; /* Distância da parte inferior */
+    right: 40px; /* Distância da parte direita */
+    z-index: 20;
 }

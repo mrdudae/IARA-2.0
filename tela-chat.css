@@ -1,9 +1,12 @@
-body {
+/* Estilos Globais */
+body { 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
 }
+
+/* Seção de Hero */
 .hero-section {
     background: linear-gradient(135deg, rgb(69, 142, 172), rgba(69, 142, 172, 0.7));
     color: white;
@@ -16,33 +19,23 @@ body {
 .hero-content {
     animation: fadeIn 1s ease-in-out;
 }
+
+/* Tema Escuro */
 .dark-theme {
     background-color: #1c2230;
-    color: #e0e0e0; /* Texto claro para contraste */
+    color: #e0e0e0;
 }
 
 .dark-theme .navbar {
     background-color: rgb(6, 23, 29);
-     color: #f9f9f9;
+    color: #f9f9f9;
 }
 
 .dark-theme header {
-    background: none; /* Remove o gradiente no modo escuro */
-    background-color: #1b2f4a; /* Define uma cor sólida azul escuro para o cabeçalho */
-
-}
-
-.dark-theme h1 {
-    color: #f9f9f9; 
     background-color: #1b2f4a;
 }
 
-.dark-theme p {
-    color: #e0e0e0;
-}
-
-.dark-theme #chatbutton {
-    background-color: rgb(6, 23, 29);
+.dark-theme h1, .dark-theme p, .dark-theme #chatbutton {
     color: #e0e0e0;
 }
 
@@ -53,9 +46,11 @@ body {
 .dark-theme .button-description {
     color: #aaa;
 }
+
+/* Alternador de Tema */
 .theme-toggle-container {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     z-index: 20;
 }
@@ -69,13 +64,15 @@ body {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 24px; /* Aumentando o tamanho do ícone */
+    font-size: 24px;
 }
 
 .theme-toggle-container button:hover {
-    background-color: rgb(69, 142, 172); /* Mesma cor no hover */
-    box-shadow: none; /* Sem sombra extra ao passar o mouse */
+    background-color: rgb(69, 142, 172);
+    box-shadow: none;
 }
+
+/* Barra de Navegação */
 .navbar {
     display: flex;
     justify-content: center;
@@ -90,14 +87,14 @@ body {
 .navbar-container {
     display: flex;
     align-items: center;
-    max-width: 1200px; /* Limitar largura da navbar */
+    max-width: 1200px;
     width: 100%;
-    padding: 0 20px; /* Espaçamento lateral */
+    padding: 0 20px;
 }
 
 .logo {
-    width: 100px; /* Largura da logo */
-    margin-right: 60px; /* Espaço entre logo e botões */
+    width: 100px;
+    margin-right: 60px;
 }
 
 .nav-buttons {
@@ -142,16 +139,76 @@ body {
     transform: scale(0.95);
 }
 
-.header-container {
-    text-align: center;
+/* Menu Icon para Mobile */
+/* Estilo do ícone de menu */
+.menu-icon {
+    display: none; /* Oculta o ícone por padrão */
+    cursor: pointer; /* Cursor de pointer para o ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    margin-left: auto; /* Mover para a extremidade direita */
 }
 
+/* Estilos da navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(69, 142, 172);
+    padding: 10px 0;
+}
+
+/* Estilo do ícone do menu */
+.menu-icon {
+    display: none; /* Oculta o ícone por padrão */
+    cursor: pointer;
+    font-size: 24px; /* Tamanho do ícone */
+    color: white; /* Cor do ícone */
+    margin-left: auto; /* Mover para a extremidade direita */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-buttons {
+        display: none; /* Oculta os botões padrão */
+    }
+    
+    .menu-icon {
+        display: block; /* Exibe o ícone de menu em dispositivos móveis */
+    }
+
+    .nav-buttons.show {
+        display: flex; /* Mostra os botões quando necessário */
+        flex-direction: column; /* Coloca os botões em coluna */
+        position: absolute; /* Permite sobreposição */
+        background-color: rgb(69, 142, 172); /* Cor do fundo */
+        top: 50px; /* Distância do ícone */
+        right: 50px; /* Alinha à direita */
+        border-radius: 5px; /* Bordas arredondadas */
+        z-index: 10; /* Coloca na frente */
+    }
+
+    .nav-button {
+        width: 80%; /* Botões ocupam toda a largura */
+        padding: 10px; /* Ajusta o padding */
+        border: none; /* Remove borda */
+        background: transparent; /* Fundo transparente */
+        color: white; /* Cor do texto */
+        text-align: left; /* Alinha texto à esquerda */
+        transition: background-color 0.3s; /* Transição suave */
+    }
+
+    .nav-button:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Efeito de hover */
+    }
+}
+/* Cabeçalho */
 h1 {
     font-family: 'Roboto', sans-serif;
     color: white;
     margin: 0;
 }
 
+/* Conteúdo Principal */
 main {
     text-align: center;
     padding: 20px;
@@ -161,74 +218,72 @@ p {
     margin: 20px auto;
     max-width: 600px;
     color: #333;
-    font-size: 1.1em; /* Aumenta o tamanho da fonte */
-    font-family: 'Roboto', sans-serif; /* Adiciona a fonte Roboto aos parágrafos */
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
 }
+
+/* Botão de Chat */
 #chatbutton {
-    display: inline-flex; /* Mantém o alinhamento do texto e da seta */
-    align-items: center; /* Alinha verticalmente o texto e a seta */
-    justify-content: center; /* Centraliza o conteúdo */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 15px 30px;
     margin: 20px auto;
     font-size: 1.2em;
-    color: white; /* Cor do texto */
-    background-color: rgb(69, 142, 172); /* Cor de fundo do botão */
+    color: white;
+    background-color: rgb(69, 142, 172);
     border: none;
-    border-radius: 30px; /* Bordas mais arredondadas */
+    border-radius: 30px;
     cursor: pointer;
-    position: relative; /* Para o pseudo-elemento ::before */
-    overflow: hidden; /* Oculta o que ultrapassa os limites do botão */
-    width: 400px; /* Largura aumentada */
-    z-index: 1; /* Garante que o texto esteja acima do ::before */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para sombra e escala */
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .arrow {
-    margin-left: 100px; /* Espaçamento entre o texto e a seta */
-    transition: transform 0.3s ease; /* Animação suave */
+    margin-left: 100px;
+    transition: transform 0.3s ease;
 }
 
 #chatbutton:hover .arrow {
-    transform: translateX(5px); /* Move a seta para a direita ao passar o mouse */
+    transform: translateX(5px);
 }
 
 #chatbutton::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Começa fora da tela à esquerda */
+    left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, #204588, rgb(69, 142, 172)); /* Degradê */
-    transition: left 0.5s ease; /* Transição suave */
-    z-index: 0; /* Fica atrás do texto */
+    background: linear-gradient(90deg, #204588, rgb(69, 142, 172));
+    transition: left 0.5s ease;
+    z-index: 0;
 }
 
 #chatbutton:hover::before {
-    left: 0; /* Move o degradê para cobrir o botão ao passar o mouse */
+    left: 0;
 }
 
 #chatbutton:hover {
-    color: white; /* Mantém a cor do texto ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento no botão ao passar o mouse */
-    position: relative; /* Garante que o texto esteja acima do degradê */
+    transform: scale(1.05);
 }
 
-
-/* Estilos responsivos */
+/* Estilos Responsivos */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.8em; /* Ajusta o tamanho do título em telas pequenas */
+        font-size: 1.8em;
     }
 
     p {
-        font-size: 1em; /* Ajusta o tamanho do parágrafo em telas pequenas */
+        font-size: 1em;
     }
 
     button {
-        font-size: 1em; /* Ajusta o tamanho da fonte do botão em telas pequenas */
-        width: 100%; /* Botão ocupa toda a largura da tela em dispositivos móveis */
+        font-size: 1em;
+        width: 100%;
     }
 }
-

@@ -1,4 +1,5 @@
-body {
+/* Estilos Globais */
+body { 
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
@@ -11,18 +12,58 @@ body {
 }
 
 header {
-    position: fixed;
+    position: fixed; /* Mantém o header fixo no topo */
     top: 0;
     width: 100%;
+    height: 70px; /* Altura do header */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(69, 142, 172);
     padding: 20px;
     color: white;
-    height: 70px;
     box-shadow: 0 2px 10px rgba(40, 57, 70, 0.906);
     z-index: 1000;
+}
+
+/* Estilo para o modo escuro */
+.dark-theme {
+    background-color: black; 
+    color: #e0e0e0; 
+}
+.dark-theme body{
+    background-color: rgb(6, 23, 29);
+}
+.dark-theme header {
+    background-color: rgb(9, 15, 46); /* Cor de fundo do cabeçalho no modo escuro */
+}
+
+.dark-theme .chat-container {
+    background-color: black; /* Fundo do chat no modo escuro */
+}
+
+.dark-theme .input-container {
+    background-color: rgb(6, 23, 29); /* Fundo do input no modo escuro */
+    border-top: 1px solid rgb(11, 41, 52); /* Borda superior mais escura */
+}
+
+.dark-theme .message.sent {
+    background-color: #2a679d; /* Cor das mensagens enviadas no modo escuro */
+}
+
+.dark-theme .message.bot {
+    background-color: #263953; /* Cor das mensagens do bot no modo escuro */
+}
+
+/* Outros ajustes para modo escuro */
+.dark-theme .input-container input {
+    border: 1px solid black; /* Borda mais escura para o input */
+    background-color: rgb(13, 26, 75); /* Fundo do input */
+    color: #e0e0e0; /* Texto claro no input */
+}
+
+.dark-theme .input-container button {
+    background-color: rgb(6, 23, 29); /* Cor do botão no modo escuro */
 }
 
 ion-icon {
@@ -31,7 +72,7 @@ ion-icon {
 }
 
 .chat-container {
-    margin-top: 7%;
+    margin-top: 200px; 
     width: 90%;
     max-width: 500px;
     height: 80vh;
@@ -40,13 +81,34 @@ ion-icon {
     box-shadow: 0 2px 10px rgba(41, 94, 144, 0.894);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+#theme-toggle {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(69, 142, 172);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 24px;
 }
 
+.theme-toggle-container button:hover {
+    background-color: rgb(69, 142, 172);
+    box-shadow: none;
+}
+
+
+/* Estilos das mensagens */
 .messages {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
 
 .message {
@@ -58,6 +120,7 @@ ion-icon {
     font-size: 16px;
 }
 
+/* Estilos para a mensagem enviada (usuário) */
 .message.sent {
     background-color: #94e2ee;
     align-self: flex-end; /* Alinha a mensagem do usuário à direita */
@@ -69,15 +132,16 @@ ion-icon {
 .message.sent::before {
     content: '';
     position: absolute;
-    right: -10px; /* Coloca o triângulo do balão do usuário na direita */
+    right: -10px; /* Triângulo do balão do usuário na direita */
     top: 10px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #94e2ee; /* Triângulo estilo balão de fala */
+    border-color: transparent transparent transparent #94e2ee;
 }
 
+/* Estilos para a mensagem do bot */
 .message.bot {
-    background-color: #007BFF; /* Azul para as mensagens do bot */
+    background-color: #2965a6; /* Azul para as mensagens do bot */
     color: white;
     align-self: flex-start; /* Alinha a mensagem do bot à esquerda */
     border-radius: 15px 15px 15px 0; /* Ajusta o balão da mensagem do bot */
@@ -87,16 +151,19 @@ ion-icon {
 .message.bot::before {
     content: '';
     position: absolute;
-    left: -10px; /* Coloca o triângulo do balão do bot na esquerda */
+    left: -10px; /* Triângulo do balão do bot na esquerda */
     top: 10px;
     border-width: 10px;
     border-style: solid;
-    border-color: transparent #007BFF transparent transparent; /* Triângulo estilo balão de fala */
+    border-color: transparent #2965a6 transparent transparent;
 }
 
+/* Input e botão de envio */
 .input-container {
     display: flex;
     padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
 }
 
 .input-container input {
@@ -122,24 +189,23 @@ ion-icon {
     background-color: rgb(53, 109, 131);
 }
 
-/* Media Queries para Responsividade */
+/* Media Queries para Responsividade em Dispositivos Móveis */
 @media (max-width: 600px) {
     .input-container input {
         font-size: 14px;
+        padding: 12px; /* Ajusta o espaçamento */
     }
+
     .input-container button {
         font-size: 14px;
+        padding: 12px;
     }
+
     .messages {
         padding: 15px;
     }
+
     .message {
         font-size: 14px;
     }
-}
-
-/* Estilo adicional para nome do bot */
-.bot-name {
-    font-weight: bold;
-    margin-bottom: 5px; /* Espaço entre o nome do bot e a mensagem */
 }

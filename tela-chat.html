@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="tela-chat.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <body>
         <nav class="navbar">
             <div class="navbar-container">
-                <img src="../imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+                <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+                
+                <!-- Ícone do menu hambúrguer -->
                 <div class="menu-icon" id="menu-icon">
-                    <i class="fas fa-bars"></i> 
+                    <i class="fas fa-bars"></i> <!-- Ícone de hambúrguer -->
                 </div>
+    
+                <!-- Botões do menu -->
                 <div class="nav-buttons" id="nav-buttons">
-                    <a href="../home/index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
-                    <button class="nav-button" onclick="scrollToSection('cadastre')"><a>politica de privacidae</a></button>
-                    <button class="nav-button" onclick="scrollToSection('voluntario')">contato</button>
-
+                    <a href="index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
+                    <button class="nav-button" onclick="scrollToSection('cadastre')"><a>Política de Privacidade</a></button>
+                    <button class="nav-button" onclick="scrollToSection('voluntario')">Contato</button>
                 </div>
             </div>
         </nav>
@@ -40,7 +44,7 @@
                 IARA é uma plataforma inovadora de suporte psicológico, onde você pode interagir com profissionais capacitados. 
                 Para mais informações, consulte nossa <a href="#">Política de Privacidade</a>.
             </p>
-            <a href="../chat/chat.html">
+            <a href="chat.html">
                 <button id="chatbutton">Siga para o Chat <span class="arrow">></span></button>
             </a>
             <p class="button-description">Clique aqui para iniciar uma conversa com um de nossos especialistas.</p>
@@ -51,7 +55,7 @@
             <p class="button-description">Marque uma sessão com um profissional de sua escolha.</p>
         </main>
 
-    <script src="../tela-chat/tela-chat.js"></script>
+    <script src="tela-chat.js"></script>
     <script src="tema.js" ></script>
 </body>
 </html>
