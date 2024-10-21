@@ -1,74 +1,101 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #a8d6f2, #b3dbf8);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(69, 142, 172);
+    padding: 20px;
+    color: white;
+    height: 70px;
+    box-shadow: 0 2px 10px rgba(40, 57, 70, 0.906);
+    z-index: 1000;
+}
+ion-icon{
+    width: 90px;
+    height: 40px;
 }
 
 .chat-container {
-    width: 80%; /* Diminuindo a largura da tela de chat */
-    max-width: 600px; /* Largura máxima */
-    height: 80vh; /* Diminuindo a altura */
-    background-color: rgb(69, 142, 172);
+    margin-top: 7%;
+    width: 90%;
+    max-width: 500px;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px  rgba(41, 94, 144, 0.894);
     display: flex;
     flex-direction: column;
-    margin: 20px auto; /* Centraliza a tela de chat com margem superior */
 }
-
 .messages {
     flex: 1;
+    padding: 20px;
     overflow-y: auto;
-    background: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column; /* Adiciona flexbox para empilhar mensagens */
+    border-bottom: 1px solid #ddd;
 }
-
 .message {
-    margin: 5px 0; /* Espaçamento entre mensagens */
-    padding: 8px 10px; /* Espaçamento interno das mensagens */
-    border-radius: 5px; /* Bordas arredondadas */
-    max-width: 70%; /* Largura máxima das mensagens */
-}
-
-.message.user {
-    background-color: rgb(69, 142, 172); /* Cor de fundo para mensagens do usuário */
-    color: white; /* Cor do texto para mensagens do usuário */
-    align-self: flex-end; /* Alinha mensagens do usuário à direita */
-}
-
-.message.bot {
-    background-color: #e1e1e1; /* Cor de fundo para mensagens do bot */
-    color: black; /* Cor do texto para mensagens do bot */
-    align-self: flex-start; /* Alinha mensagens do bot à esquerda */
-}
-
-.input-container {
-    display: flex; /* Flexbox para alinhar o input e o botão */
-}
-
-input {
+    margin: 10px 0;
     padding: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    flex: 1; /* Faz o input ocupar o espaço restante */
-    margin-right: 10px; /* Espaço entre input e botão */
+    max-width: 75%;
 }
-
-button {
+.message.sent {
+    background-color: #94e2ee;
+    align-self: flex-end;
+}
+.message.received {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+}
+.input-container {
+    display: flex;
     padding: 10px;
+}
+.input-container input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid  rgb(69, 142, 172);
+    border-radius: 5px;
+    font-size: 16px;
+}
+.input-container button {
+    padding: 15px;
+    margin-left: 5px;
     border: none;
+    background-color: rgb(69, 142, 172);
+    color: white;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s; /* Transição suave */
+    font-size: 16px;
 }
-
-#sendButton {
-    background-color: rgb(69, 142, 172); /* Cor inicial */
-    color: white; /* Cor do texto */
+.input-container button:hover {
+    background-color:  rgb(53, 109, 131);
 }
-
-#sendButton:hover {
-    background: linear-gradient(90deg, rgba(69, 142, 172, 1) 0%, rgb(49, 115, 132) 100%); /* Gradiente ao passar o mouse */
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    .input-container input {
+        font-size: 14px;
+    }
+    .input-container button {
+        font-size: 14px;
+    }
+    .messages {
+        padding: 15px;
+    }
+    .message {
+        font-size: 14px;
+    }
 }
