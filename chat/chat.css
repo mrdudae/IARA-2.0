@@ -24,7 +24,8 @@ header {
     box-shadow: 0 2px 10px rgba(40, 57, 70, 0.906);
     z-index: 1000;
 }
-ion-icon{
+
+ion-icon {
     width: 90px;
     height: 40px;
 }
@@ -36,41 +37,76 @@ ion-icon{
     height: 80vh;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 10px  rgba(41, 94, 144, 0.894);
+    box-shadow: 0 2px 10px rgba(41, 94, 144, 0.894);
     display: flex;
     flex-direction: column;
 }
+
 .messages {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
     border-bottom: 1px solid #ddd;
 }
+
 .message {
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 15px;
     max-width: 75%;
+    position: relative;
+    font-size: 16px;
 }
+
 .message.sent {
     background-color: #94e2ee;
-    align-self: flex-end;
+    align-self: flex-end; /* Alinha a mensagem do usuário à direita */
+    color: #000;
+    border-radius: 15px 15px 0 15px; /* Ajusta o balão da mensagem do usuário */
+    text-align: right; /* Texto alinhado à direita */
 }
-.message.received {
-    background-color: #f1f0f0;
-    align-self: flex-start;
+
+.message.sent::before {
+    content: '';
+    position: absolute;
+    right: -10px; /* Coloca o triângulo do balão do usuário na direita */
+    top: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #94e2ee; /* Triângulo estilo balão de fala */
 }
+
+.message.bot {
+    background-color: #007BFF; /* Azul para as mensagens do bot */
+    color: white;
+    align-self: flex-start; /* Alinha a mensagem do bot à esquerda */
+    border-radius: 15px 15px 15px 0; /* Ajusta o balão da mensagem do bot */
+    text-align: left; /* Texto alinhado à esquerda */
+}
+
+.message.bot::before {
+    content: '';
+    position: absolute;
+    left: -10px; /* Coloca o triângulo do balão do bot na esquerda */
+    top: 10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #007BFF transparent transparent; /* Triângulo estilo balão de fala */
+}
+
 .input-container {
     display: flex;
     padding: 10px;
 }
+
 .input-container input {
     flex: 1;
     padding: 15px;
-    border: 1px solid  rgb(69, 142, 172);
+    border: 1px solid rgb(69, 142, 172);
     border-radius: 5px;
     font-size: 16px;
 }
+
 .input-container button {
     padding: 15px;
     margin-left: 5px;
@@ -81,9 +117,11 @@ ion-icon{
     cursor: pointer;
     font-size: 16px;
 }
+
 .input-container button:hover {
-    background-color:  rgb(53, 109, 131);
+    background-color: rgb(53, 109, 131);
 }
+
 /* Media Queries para Responsividade */
 @media (max-width: 600px) {
     .input-container input {
@@ -98,4 +136,10 @@ ion-icon{
     .message {
         font-size: 14px;
     }
+}
+
+/* Estilo adicional para nome do bot */
+.bot-name {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espaço entre o nome do bot e a mensagem */
 }
