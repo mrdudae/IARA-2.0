@@ -1,5 +1,5 @@
 
-                    // JS para parte darck do site
+                    // JS para parte dark do site
 document.getElementById("theme-toggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-theme");
     
