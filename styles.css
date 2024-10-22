@@ -9,6 +9,7 @@ body {
     background-color: white;
     color: black;
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body.dark {
@@ -90,12 +91,14 @@ body.dark-theme {
 
 .navbar {
     display: flex;
+    justify-content: center;
     background-color: rgb(69, 142, 172);
     padding: 10px 0;
     position: sticky;
-    top: 0;
+    top: auto;
     z-index: 10;
     animation: slideDown 0.5s forwards;
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
 }
 
 .navbar-container {
@@ -104,17 +107,20 @@ body.dark-theme {
     max-width: 1200px; /* Limitar largura da navbar */
     width: 100%;
     padding: 0 20px; /* Espaçamento lateral */
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
 }
 
 .logo {
     width: 100px; /* Largura da logo */
-    margin-right: 60px; /* Espaço entre logo e botões */
+    margin-left: 124px; /* Move para a direita */
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
 }
 
 .nav-buttons {
     display: flex;
     gap: 10px;
-    margin-left: 10%;
+    margin-right: 18%;
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
 }
 
 .nav-button {
@@ -127,7 +133,7 @@ body.dark-theme {
     transition: color 0.3s;
     font-size: 16px;
     position: relative;
-    margin-right: 5%;
+    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
 }
 
 .nav-button::after {
@@ -152,6 +158,40 @@ body.dark-theme {
 
 .nav-button:active {
     transform: scale(0.95);
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.social-media a {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ccc;
+}
+
+ion-icon {
+    font-size: 24px;
+  
+}
+
+#whatsapp {
+    margin-left: 923%;
+    transform: scale(1.2);
+    top: -90%;
+}
+
+#Instagram {
+    margin-left: 920%;
+    transform: scale(1.2);
 }
 
 .hero-section {

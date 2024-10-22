@@ -4,8 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema IARA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="imagens/logo favicon (3).png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/logo favicon (4).png" type="image/x-icon">
 </head>
 <body>
     <nav class="navbar">
@@ -16,9 +18,18 @@
             <div class="nav-buttons" id="nav-buttons">
                 <button class="nav-button" onclick="scrollToSection('sobre')">Home</button>
                 <button class="nav-button" onclick="scrollToSection('voluntario')"><a href="feedback.html">Feedback</button></a>
+                <button class="nav-button" onclick="scrollToSection('voluntario')"><a href="suporte.html">Suporte</button></a>
                 <button id="login" class="nav-button" onclick="scrollToSection('sla')"><a href="#sobre">Sobre</a></button>
-                <button id="cadastra-se" class="nav-button" onclick="scrollToSection('entre')"><a href="formulário.html">Cadastra-se</a></button>
+                <button id="cadastra-se" class="nav-button" onclick="scrollToSection('entre')"><a href="formulário.html">Cadastro</a></button>
                 <button id="cadastra-se" class="nav-button" onclick="scrollToSection('entre')"><a href="login.html">Login</a></button>
+                <div class="social-media">
+                    <a href="https://wa.me/+5585999059763" target="_blank">
+                        <ion-icon name="logo-whatsapp" id="whatsapp"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/sistema_iara" target="_blank">
+                        <ion-icon name="logo-instagram" id="Instagram"></ion-icon>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -34,13 +45,13 @@
     <div class="buttons-container">
         <div class="button-step">
             <h3 class="animated-subtitle">Chat</h3>
-            <p class="animated-text">Descrição do primeiro botão de apoio e proteção.</p><br>
+            <p class="animated-text">Clique no botão de chat para receber ajuda imediata através do nosso chat bot, que oferece suporte e informações essenciais. Também é possível agendar consultas com psicólogos para um atendimento personalizado..</p><br>
            <a href="tela-chat.html"><button class="action-button">Chat</button></a> 
         </div>
         <div class="button-step">
 
             <h3 class="animated-subtitle">Locais de apoio</h3>
-            <p class="animated-text">Descrição do segundo botão de apoio e proteção.</p><br>
+            <p class="animated-text">Encontre os melhores locais de apoio para a resolução de seus problemas. Clique no botão de locais de apoio para acessar uma lista de centros de atendimento, ONGs, e serviços de assistência social e jurídico que estão inseridos em nosso sistema</p><br>
             <button class="action-button">Locais de apoio</button>
         </div>
     
@@ -134,8 +145,13 @@
     </div>
     <section id="sobre" class="info-section">
         <h2 class="animated-title">Sobre o Projeto</h2>
-        <img src="imagens/logo favicon (4).png" alt="Sobre o Projeto" class="section-image">
-        <p class="animated-text">Nosso projeto visa oferecer apoio emocional, psicológico e jurídico a pessoas vítimas de violência. Trabalhamos para criar um ambiente seguro e acolhedor, promovendo a conscientização sobre os direitos das vítimas.</p>
+        <img src="imagens/logo favicon (4).png" class="section-image">
+        <p class="animated-text">O projeto IARA (Inclusão, Apoio, Respeito e Ajuda) é uma iniciativa inovadora que utiliza tecnologia para oferecer suporte personalizado a mulheres e pessoas LGBT+. Nosso sistema permite que os usuários, com base em seu endereço, recebam uma lista de locais de apoio mais próximos, como centros de atendimento, ONGs, e serviços de assistência social e jurídica.</p>
+        <br>
+        <p>Além de fornecer informações sobre onde buscar ajuda, IARA oferece orientações detalhadas sobre direitos legais, ajudando os usuários a entenderem e aplicarem seus direitos caso decidam resolver seus problemas judicialmente. Nosso objetivo é enfrentar os desafios de discriminação, violência e injustiça, promovendo a inclusão e o respeito.</p>
+        <br>
+        <p>Para garantir um suporte ainda mais completo, o projeto IARA inclui um botão de chat. Através desse chat, os usuários podem interagir com um chat bot especialmente treinado para oferecer auxílio imediato e informações relevantes. Além disso, é possível agendar consultas com psicólogos, proporcionando um atendimento psicológico adequado para as vítimas.
+                    </p>
     </section>
 
     <section id="equipe" class="team-section">
@@ -173,7 +189,8 @@
         <button onclick="rejectPrivacy()">Rejeitar</button>
     </div>
     
-
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
