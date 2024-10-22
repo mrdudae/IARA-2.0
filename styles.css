@@ -560,9 +560,9 @@ a {
         justify-content: space-between;
     }
 
-    .button-step {
-        width: 48%; /* Ajusta a largura para que dois botões caibam lado a lado */
-        margin: 5px 0; /* Ajusta as margens */
+    button-step {
+        margin-left: 20px;
+        width: 100%; /* Ajusta a largura para que dois botões caibam lado a lado */
     }
 }
 
