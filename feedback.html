@@ -10,19 +10,26 @@
     <link rel="shortcut icon" href="imagens/logo favicon (3).png" type="image/x-icon">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
-            <div class="menu-icon" id="menu-icon">
+   
+        <nav class="navbar">
+            <div class="navbar-container">
+                <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+                <div class="menu-icon" id="menu-icon">
+                </div>
+                <div class="nav-buttons" id="nav-buttons">
+                    <a href="index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
+                    <button class="nav-button" onclick="scrollToSection('voluntario')"><a href="feedback.html">Feedback</button></a>
+                    <a href="https://wa.me/+5585999059763" target="_blank"><button class="nav-button" onclick="scrollToSection('sla')" ">Suporte</button></a>
+                </div>
             </div>
-            <div class="nav-buttons" id="nav-buttons">
-                <a href="index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
-                <button class="nav-button" onclick="scrollToSection('voluntario')"><a href="feedback.html">Feedback</button></a>
-                <button class="nav-button" onclick="scrollToSection('sla')">Suporte</button>
+        </nav>
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="animated-title">Dê o seu feedback</h1>
+                <p class="animated-description">Espero que tenha gostado</p>
             </div>
-        </div>
-    </nav>
-    
+        </header>
+
     <div class="wrapper">
         <h3>Deixe seu feedback sobre o site!</h3>
         <form action="#">
@@ -46,7 +53,6 @@
             </button>
         </div>
     </div>
-    <script src="feedback.js"></script>
-    <script src="tema.js"></script>
+    <script src="feedback.js"></script> 
 </body>
 </html>

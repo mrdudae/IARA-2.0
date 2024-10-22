@@ -139,68 +139,7 @@ body {
     transform: scale(0.95);
 }
 
-/* Menu Icon para Mobile */
-/* Estilo do ícone de menu */
-.menu-icon {
-    display: none; /* Oculta o ícone por padrão */
-    cursor: pointer; /* Cursor de pointer para o ícone */
-    font-size: 24px; /* Tamanho do ícone */
-    color: white; /* Cor do ícone */
-    margin-left: auto; /* Mover para a extremidade direita */
-}
 
-/* Estilos da navbar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(69, 142, 172);
-    padding: 10px 0;
-}
-
-/* Estilo do ícone do menu */
-.menu-icon {
-    display: none; /* Oculta o ícone por padrão */
-    cursor: pointer;
-    font-size: 24px; /* Tamanho do ícone */
-    color: white; /* Cor do ícone */
-    margin-left: auto; /* Mover para a extremidade direita */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-buttons {
-        display: none; /* Oculta os botões padrão */
-    }
-    
-    .menu-icon {
-        display: block; /* Exibe o ícone de menu em dispositivos móveis */
-    }
-
-    .nav-buttons.show {
-        display: flex; /* Mostra os botões quando necessário */
-        flex-direction: column; /* Coloca os botões em coluna */
-        position: absolute; /* Permite sobreposição */
-        background-color: rgb(69, 142, 172); /* Cor do fundo */
-        top: 50px; /* Distância do ícone */
-        right: 50px; /* Alinha à direita */
-        border-radius: 5px; /* Bordas arredondadas */
-        z-index: 10; /* Coloca na frente */
-    }
-
-    .nav-button {
-        width: 80%; /* Botões ocupam toda a largura */
-        padding: 10px; /* Ajusta o padding */
-        border: none; /* Remove borda */
-        background: transparent; /* Fundo transparente */
-        color: white; /* Cor do texto */
-        text-align: left; /* Alinha texto à esquerda */
-        transition: background-color 0.3s; /* Transição suave */
-    }
-
-    .nav-button:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Efeito de hover */
-    }
-}
 /* Cabeçalho */
 h1 {
     font-family: 'Roboto', sans-serif;
@@ -248,22 +187,6 @@ p {
     transition: transform 0.3s ease;
 }
 
-#chatbutton:hover .arrow {
-    transform: translateX(5px);
-}
-
-#chatbutton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #204588, rgb(69, 142, 172));
-    transition: left 0.5s ease;
-    z-index: 0;
-}
-
 #chatbutton:hover::before {
     left: 0;
 }
@@ -285,5 +208,37 @@ p {
     button {
         font-size: 1em;
         width: 100%;
+    }
+}
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column; /* Altera a direção para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .nav-buttons {
+        flex-direction: row; /* Garante que os botões estejam em linha */
+        justify-content: center; /* Centraliza os botões */
+        margin-left: 0; /* Remove a margem esquerda para melhor alinhamento */
+        gap: 10px; /* Mantém o espaçamento entre os botões */
+    }
+
+    .nav-button {
+        padding: 10px 10px; /* Ajusta o padding para dispositivos móveis */
+        font-size: 14px; /* Reduz o tamanho da fonte, se necessário */
     }
 }

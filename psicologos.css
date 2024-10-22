@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Cor de fundo padrão */
+    color: #333; /* Cor do texto padrão */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no final da página */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave entre os temas */
+    align-items: stretch; /* Estende os elementos para ocupar a largura total */
+    text-align: center; /* Centraliza o texto */
+}
+
+.carousel-item {
+    min-width: 100%;
+    border: 2px solid #69a3b1;
+    border-right: 2px solid #69a3b1; /* Adicionando borda à direita */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 40px; /* Aumentando o padding para tornar as pessoas mais destacadas */
+    background-color: white; /* Cor de fundo das cartas padrão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para tema escuro */
+}
+
+.navbar {
+    background-color: #69a3b1; /* Cor da navbar padrão */
+    padding: 20px 0; /* Aumentando a altura da navbar */
+    width: 100%; /* Faz a navbar ocupar toda a largura */
+}
+
+.navbar .logo {
+    height: 60px; /* Ajuste a altura da logo conforme necessário */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Usando flexbox para a lista */
+    justify-content: center; /* Centraliza os itens da lista */
+}
+
+.navbar li {
+    margin: 0 20px; /* Aumentando o espaço entre os itens */
+}
+
+.navbar a {
+    color: #ecf0f1; /* Cor do texto dos links no tema claro */
+    text-decoration: none;
+    font-size: 18px; /* Aumentando o tamanho da fonte dos links */
+}
+
+header {
+    background-color: #69a3b1; /* Cor do header padrão */
+    color: white;
+    padding: 20px 0; /* Aumentando a altura do header */
+    width: 100%; /* Faz o header ocupar toda a largura */
+}
+
+.info {
+    padding: 20px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px; /* Aumentando a largura do carrossel */
+    margin: 20px auto; /* Centralizando o carrossel */
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    border: 2px solid #69a3b1;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 40px; /* Aumentando o padding para tornar as pessoas mais destacadas */
+    background-color: white; /* Cor de fundo das cartas padrão */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto; /* Garante que a imagem mantenha a proporção */
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: white; /* Cor de fundo do botão padrão */
+    border: 2px solid #69a3b1;
+    color: #69a3b1;
+    padding: 10px 20px; /* Aumentando o padding do botão */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #69a3b1; /* Cor do botão ao passar o mouse */
+    color: white;
+}
+
+a {
+    color: #69a3b1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #69a3b1; /* Cor do footer padrão */
+    color: white;
+    padding: 20px 0; /* Aumentando a altura do footer */
+    width: 100%; /* Faz o footer ocupar toda a largura */
+    margin-top: auto; /* Garante que o footer fique no final da página */
+}
+
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .navbar li {
+        margin: 0 10px; /* Reduzindo o espaço em telas menores */
+    }
+
+    .carousel {
+        max-width: 90%;
+    }
+}

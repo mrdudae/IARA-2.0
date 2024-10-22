@@ -119,7 +119,6 @@ body.dark-theme {
 .nav-buttons {
     display: flex;
     gap: 10px;
-    margin-right: 18%;
     font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
 }
 
@@ -160,39 +159,6 @@ body.dark-theme {
     transform: scale(0.95);
 }
 
-.social-media {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-
-.social-media a {
-    margin-left: 10px;
-    color: white;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-
-.social-media a:hover {
-    color: #ccc;
-}
-
-ion-icon {
-    font-size: 24px;
-  
-}
-
-#whatsapp {
-    margin-left: 923%;
-    transform: scale(1.2);
-    top: -90%;
-}
-
-#Instagram {
-    margin-left: 920%;
-    transform: scale(1.2);
-}
 
 .hero-section {
     background: linear-gradient(135deg, rgb(69, 142, 172), rgba(69, 142, 172, 0.7));
@@ -389,7 +355,7 @@ ion-icon {
 }
 
 .animated-text{
-    font-size: 20px;
+    font-size: 23px;
 }
 /* Estilo para a seção da equipe */
 .team-section {
