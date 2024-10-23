@@ -28,9 +28,18 @@ header {
 }
 
 /* Estilo para o modo escuro */
-.dark-theme {
-    background-color: black; 
-    color: #e0e0e0; 
+
+
+#mensagem.dark-theme{
+    background-color: rgb(48, 91, 109);}
+
+#navzin{
+    background: linear-gradient(135deg, rgb(69, 142, 172), rgba(69, 142, 172, 0.7));
+}
+
+#pqp.dark-theme{
+
+    background-color: rgb(12, 42, 53);
 }
 .dark-theme body{
     background-color: rgb(6, 23, 29);
@@ -44,7 +53,7 @@ header {
 }
 
 .dark-theme .input-container {
-    background-color: rgb(6, 23, 29); /* Fundo do input no modo escuro */
+    background-color: rgb(35, 67, 78);
     border-top: 1px solid rgb(11, 41, 52); /* Borda superior mais escura */
 }
 
@@ -59,8 +68,8 @@ header {
 /* Outros ajustes para modo escuro */
 .dark-theme .input-container input {
     border: 1px solid black; /* Borda mais escura para o input */
-    background-color: rgb(13, 26, 75); /* Fundo do input */
-    color: #e0e0e0; /* Texto claro no input */
+    background-color: #fff; /* Fundo do input */
+    color: black; /* Texto claro no input */
 }
 
 .dark-theme .input-container button {
@@ -70,6 +79,7 @@ header {
 ion-icon {
     width: 90px;
     height: 40px;
+    color: #fff;
 }
 
 .chat-container {
@@ -95,8 +105,8 @@ ion-icon {
     transition: background-color 0.3s;
     font-size: 24px;
     position: fixed;
-    bottom: 20px;
     right: 20px;
+    margin-left: 70%;
 }
 .theme-toggle-container button:hover {
     background-color: rgb(69, 142, 172);
@@ -217,5 +227,24 @@ ion-icon {
     #theme-toggle{
         top: 120px;
         left: 30px
+    }
+}
+
+/* Responsividade apenas para o chat-container em dispositivos móveis */
+@media (max-width: 600px) {
+    .chat-container {
+        width: 100%; /* Ocupar toda a largura da tela no celular */
+        height: 75vh; /* Ajusta a altura para se adequar a telas menores */
+        margin-top: 150px; /* Garante que o chat não se sobreponha ao header */
+        border-radius: 0; /* Remove bordas arredondadas para melhor adaptação em telas móveis */
+    }
+
+    .messages {
+        padding: 15px; /* Ajuste do padding para melhor visualização no mobile */
+    }
+
+    .message {
+        font-size: 14px; /* Reduz o tamanho da fonte para melhor leitura */
+        margin: 8px 0; /* Reduz o espaçamento entre mensagens */
     }
 }

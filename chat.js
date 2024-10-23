@@ -23,7 +23,7 @@ function addMessage(content, sender) {
 // Função para enviar uma mensagem ao bot via API
 async function sendMessage(message) {
     try {
-        const response = await fetch('http://localhost:9000/mensagens/', { // Verifique se essa URL está correta
+        const response = await fetch('https//back-end-iara-production.up.railway.app/mensagens/', { // Verifique se essa URL está correta
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ mensagem: message })// Enviando a mensagem do usuário
