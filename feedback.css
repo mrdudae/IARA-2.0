@@ -13,7 +13,7 @@
   --light: #f5f5f5;
   --grey: #aaa;
   --white: #fff;
-  --shadow: 8px 8px 30px rgba(0, 0, 0, 0.05);
+  --shadow: 8px 8px 30px rgba(0, 0, 0, 0.226);
 }
 
 body {
@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   height: 120vh;
+  background-color: #f4f4f4;
 }
 body.dark-theme {
   background-color: rgb(42, 70, 82);

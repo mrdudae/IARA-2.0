@@ -101,3 +101,28 @@ input::placeholder {
 }
 
 
+@media (max-width: 600px) {
+    h1{
+        position: relative;
+        max-width: 500px;
+    }
+
+    #container{
+        max-width: 400px;
+    }
+    
+    .social-icons a {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .container button {
+        padding: 8px 30px;
+        font-size: 10px;
+    }
+
+    .container input {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

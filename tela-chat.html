@@ -6,8 +6,7 @@
     <title>Conheça a IARA</title>
     <link rel="stylesheet" href="tela-chat.css">
     <link rel="shortcut icon" href="imagens/logo favicon (3).png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+   
 </head>
 <body>
     <body>
@@ -15,26 +14,26 @@
             <div class="navbar-container">
                 <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
                 <div class="menu-icon" id="menu-icon"></div>
-                <!-- Botões do menu -->
                 <div class="nav-buttons" id="nav-buttons">
-                    <a href="index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
-                    <button class="nav-button" onclick="scrollToSection('cadastre')"><a>Política de Privacidade</a></button>
+                    <a style="margin-left: 40px;" href="index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
+                    <a href="feedback.html"><button class="nav-button" onclick="scrollToSection('voluntario')">Feedback</button></a>
                     <button class="nav-button" onclick="scrollToSection('voluntario')">Contato</button>
+                    <a href="https://wa.me//+5585999059763"><button class="nav-button" onclick="scrollToSection('voluntario')">Suporte</button></a>
                 </div>
             </div>
         </nav>
-        <div class="theme-toggle-container">
-            <button id="theme-toggle">
-                <span id="theme-icon">🌞</span> 
-            </button>
-        </div>
         <header class="hero-section">
             <div class="hero-content">
                 <h1 class="animated-title">Bem-vindo ao chat!</h1>
             </div>
         </header>
+        <div class="theme-toggle-container">
+            <button id="theme-toggle">
+                <span id="theme-icon">🌞</span> 
+            </button>
+        </div>
     
-        <main>
+        <main class="box-chat">
             <p>
                 IARA é uma plataforma inovadora de suporte psicológico, onde você pode interagir com profissionais capacitados. 
                 Para mais informações, consulte nossa <a href="#">Política de Privacidade</a>.
@@ -42,12 +41,6 @@
             <a href="chat.html">
                 <button id="chatbutton">Siga para o Chat <span class="arrow">></span></button>
             </a>
-            <p class="button-description">Clique aqui para iniciar uma conversa com um de nossos especialistas.</p>
-    
-            <a href="psicológo.html">
-                <button id="chatbutton">Conheça nossos pisicologos<span class="arrow">></span></button>
-            </a>
-            <p class="button-description">Faça uma sessão com um profissional de sua escolha.</p>
         </main>
 
     <script src="tela-chat.js"></script>
