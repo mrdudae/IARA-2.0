@@ -11,6 +11,7 @@ body {
 
 }
 
+
 header {
     position: fixed; /* Mantém o header fixo no topo */
     top: 0;
@@ -187,6 +188,8 @@ ion-icon {
     font-size: 16px;
 }
 
+
+
 .input-container button:hover {
     background-color: rgb(53, 109, 131);
 }
@@ -209,5 +212,10 @@ ion-icon {
 
     .message {
         font-size: 14px;
+    }
+
+    #theme-toggle{
+        top: 120px;
+        left: 30px
     }
 }
