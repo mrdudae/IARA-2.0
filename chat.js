@@ -15,7 +15,7 @@ function addMessage(content, sender) {
         messageElement.classList.add('bot'); // Aplica o estilo para mensagens do bot
     }
 
-    messageElement.textContent = content;
+    messageElement.innerHTML = content;
     messagesDiv.appendChild(messageElement);
     messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll automático para o final
 }
@@ -23,15 +23,17 @@ function addMessage(content, sender) {
 // Função para enviar uma mensagem ao bot via API
 async function sendMessage(message) {
     try {
-        const response = await fetch('http://localhost:9000/mensagens/', { // Verifique se essa URL está correta
+        const response = await fetch('https://back-end-iara-production.up.railway.app/mensagens/', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ mensagem: message })// Enviando a mensagem do usuário
+            headers: { 'Content-Type': 'application/json; charset=UTF-8' },
+            body: JSON.stringify({ mensagem: message })
         });
 
         if (response.ok) {
-            const respostaBot = await response.text(); // Recebendo a resposta como texto
-            addMessage(respostaBot, 'bot'); // Adiciona a resposta do bot na tela
+            const arrayBuffer = await response.arrayBuffer(); // Obtemos um ArrayBuffer
+            const decoder = new TextDecoder('utf-8'); // Criamos um decodificador
+            const respostaBot = decoder.decode(arrayBuffer); // Decodificamos a resposta
+            addMessage(respostaBot, 'bot');
         } else {
             addMessage('Desculpe, não consegui me comunicar com o bot.', 'bot');
         }
@@ -40,6 +42,7 @@ async function sendMessage(message) {
         addMessage('Desculpe, algo deu errado.', 'bot');
     }
 }
+
 
 // Função para processar a mensagem
 function processMessage() {
