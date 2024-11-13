@@ -18,13 +18,7 @@ function addMessage(message, type) {
     messageElement.classList.add('message', type);
     messageElement.textContent = message;
     document.getElementById('chat-box').appendChild(messageElement);
+
+    // Rolando para a última mensagem
     messageElement.scrollIntoView({ behavior: 'smooth' });
 }
-
-// Menu Hamburguer
-document.getElementById('hamburger').addEventListener('click', function() {
-    document.getElementById('sidebar').classList.toggle('active');
-});
-
-
-
