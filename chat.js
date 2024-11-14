@@ -1,23 +1,26 @@
-// Referência aos elementos no DOM
-const userInput = document.getElementById('messageInput');
-const messagesDiv = document.getElementById('messages');
-const sendButton = document.getElementById('sendButton');
+document.getElementById('send-btn').addEventListener('click', function() {
+    const messageInput = document.getElementById('message-input');
+    const chatBox = document.getElementById('chat-box');
 
-// Função para adicionar mensagens na caixa de chat
-function addMessage(content, sender) {
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message');
+    const userMessage = messageInput.value.trim();
+    if (userMessage) {
+        addMessage(userMessage, 'sent');
+        messageInput.value = '';
 
-    // Diferenciar as mensagens do usuário e do bot com base na classe
-    if (sender === 'user') {
-        messageElement.classList.add('sent'); // Aplica o estilo para mensagens enviadas pelo usuário
-    } else if (sender === 'bot') {
-        messageElement.classList.add('bot'); // Aplica o estilo para mensagens do bot
+        setTimeout(() => {
+            addMessage('Esta é uma resposta automática.', 'received');
+        }, 1000);
     }
+});
 
-    messageElement.innerHTML = content;
-    messagesDiv.appendChild(messageElement);
-    messagesDiv.scrollTop = messagesDiv.scrollHeight; // Scroll automático para o final
+function addMessage(message, type) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message', type);
+    messageElement.textContent = message;
+    document.getElementById('chat-box').appendChild(messageElement);
+
+    // Rolando para a última mensagem
+    messageElement.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Função para enviar uma mensagem ao bot via API
