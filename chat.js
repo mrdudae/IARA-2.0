@@ -1,93 +1,69 @@
-document.getElementById('send-btn').addEventListener('click', function() {
+// Certifique-se de que o DOM foi carregado antes de acessar os elementos
+document.addEventListener('DOMContentLoaded', () => {
+    // Botão de enviar mensagem
+    const sendButton = document.getElementById('send-btn');
     const messageInput = document.getElementById('message-input');
     const chatBox = document.getElementById('chat-box');
 
-    const userMessage = messageInput.value.trim();
-    if (userMessage) {
-        addMessage(userMessage, 'sent');
-        messageInput.value = '';
-
-        setTimeout(() => {
-            addMessage('Esta é uma resposta automática.', 'received');
-        }, 1000);
+    if (!sendButton || !messageInput || !chatBox) {
+        console.error('Elementos essenciais não encontrados no DOM.');
+        return;
     }
-});
 
-function addMessage(message, type) {
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('message', type);
-    messageElement.textContent = message;
-    document.getElementById('chat-box').appendChild(messageElement);
-
-    // Rolando para a última mensagem
-    messageElement.scrollIntoView({ behavior: 'smooth' });
-}
-
-// Função para enviar uma mensagem ao bot via API
-async function sendMessage(message) {
-    try {
-        const response = await fetch('http://localhost:9000/mensagens/', { // Verifique se essa URL está correta
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-            body: JSON.stringify({ mensagem: message })
-        });
-
-        if (response.ok) {
-            const arrayBuffer = await response.arrayBuffer(); // Obtemos um ArrayBuffer
-            const decoder = new TextDecoder('utf-8'); // Criamos um decodificador
-            const respostaBot = decoder.decode(arrayBuffer); // Decodificamos a resposta
-            addMessage(respostaBot, 'bot');
-        } else {
-            addMessage('Desculpe, não consegui me comunicar com o bot.', 'bot');
-        }
-    } catch (error) {
-        console.error('Erro ao enviar mensagem:', error);
-        addMessage('Desculpe, algo deu errado.', 'bot');
-    }
-}
-
-
-// Função para processar a mensagem
-function processMessage() {
-    const message = userInput.value;
-    if (message.trim() !== "") {
-        addMessage(message, 'user'); // Adiciona a mensagem do usuário com a classe 'sent'
-        userInput.value = ''; // Limpa o campo de entrada
-        sendMessage(message); // Envia a mensagem para a API do bot
-    }
-}
-
-// Evento de clique no botão "Enviar"
-sendButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    processMessage();
-});
-
-// Evento para capturar a tecla Enter no campo de input
-userInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        e.preventDefault(); // Impede o comportamento padrão do Enter (submit)
+    // Evento de clique no botão "Enviar"
+    sendButton.addEventListener('click', () => {
         processMessage();
-    }
-});
-
-                                                //tema dark
-
-document.getElementById("theme-toggle").addEventListener("click", function() {
-    // Alterna a classe "dark-theme" no body
-    document.body.classList.toggle("dark-theme");
-
-    // Seleciona todos os elementos que devem ter a classe "dark-theme" adicionada/alternada
-    const elements = document.querySelectorAll(
-        '.navbar, body, .header-container, header, main, p, button, .button-description, .chat-container, .input-container, .messages, .message'
-    );
-
-    // Alterna a classe "dark-theme" em todos os elementos selecionados
-    elements.forEach(element => {
-        element.classList.toggle("dark-theme");
     });
 
-    // Alterna o ícone entre sol e lua
-    const themeIcon = document.getElementById("theme-icon");
-    themeIcon.textContent = document.body.classList.contains("dark-theme") ? "🌜" : "🌞"; // Muda o ícone
+    // Função para adicionar mensagens ao chat
+    function addMessage(message, type) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', type);
+        messageElement.textContent = message;
+        chatBox.appendChild(messageElement);
+
+        // Rolando para a última mensagem
+        messageElement.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Função para enviar mensagem ao bot via API
+    async function sendMessage(message) {
+        try {
+            const response = await fetch('http://localhost:9000/mensagens/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json; charset=UTF-8' },
+                body: JSON.stringify({ mensagem: message }),
+            });
+
+            if (response.ok) {
+                const respostaBot = await response.text(); // Recebe a resposta como texto diretamente
+                addMessage(respostaBot, 'received'); // Adiciona a resposta ao chat
+            } else {
+                addMessage('Erro na comunicação com o bot.', 'received');
+            }
+        } catch (error) {
+            console.error('Erro ao enviar mensagem:', error);
+            addMessage('Erro ao conectar-se ao servidor.', 'received');
+        }
+    }
+
+    // Função para processar a entrada do usuário
+    function processMessage() {
+        const userMessage = messageInput.value.trim();
+
+        if (userMessage) {
+            addMessage(userMessage, 'sent'); // Exibe a mensagem do usuário
+            messageInput.value = ''; // Limpa o campo de entrada
+            sendMessage(userMessage); // Envia a mensagem para o bot
+        }
+    }
+
+    // Captura a tecla Enter para enviar mensagens
+    messageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            processMessage();
+        }
+    });
+    
 });
