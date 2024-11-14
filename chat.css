@@ -103,12 +103,12 @@ body {
 }
 
 .topbar-search input:focus {
-    border-color: #4e8cff;
+    border-color: #1b386d;
 }
 
 .topbar-search button {
     padding: 8px;
-    background-color: #4e8cff;
+    background-color: #1b386d;
     color: white;
     border: none;
     border-radius: 50%;
@@ -128,9 +128,9 @@ body {
 
 .chat-container {
     margin-left: 40%;
-    margin-top: 10%;
+    margin-top: 8%;
     width: 600px; /* Aumenta a largura do chat */
-    height: 800px; /* Permite que a altura do contêiner do chat se ajuste automaticamente */
+    height: 600px; /* Permite que a altura do contêiner do chat se ajuste automaticamente */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -173,11 +173,12 @@ body {
 }
 
 .message-form input:focus {
-    border-color: #4e8cff;
+    border-color: #1b386d;
 }
 
-.message-form button {
-    background-color: #4e8cff;
+.message-form button { 
+    background-color: #1b386d;
+    font-size: 15px;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -185,10 +186,14 @@ body {
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .message-form button:hover {
-    background-color: #3578e5;
+    background-color: #3d629d;
 }
 
 .message {
@@ -202,14 +207,14 @@ body {
     word-wrap: break-word;
 }
 .message.sent {
-    background-color: #4e8cff;
+    background-color: #1b386d;
     color: white;
     align-self: flex-end;
 }
 
 .message.received {
-    background-color: #f1f1f1;
-    color: #333;
+    background-color: #cadaee;
+    color: black;
 }
 
 
@@ -242,9 +247,10 @@ body {
 
     .chat-container {
         margin: auto; /* Centralizar o chat no modo celular */
-        width: 95%; /* Aumenta a largura do chat */
-        max-width: 600px; /* Aumenta o tamanho máximo do chat */
-        height: 70vh; /* Aumenta a altura do chat */
+        width: 90%; /* Aumenta a largura do chat */
+        max-width: 600px;
+        margin-top: 40%;
+        height: 65vh; /* Aumenta a altura do chat */
     }
 }
 
