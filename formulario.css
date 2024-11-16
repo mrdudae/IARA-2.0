@@ -126,3 +126,64 @@ input::placeholder {
         padding: 8px 10px;
     }
 }
+
+
+/* modo dark*/
+
+
+.dark-mode {
+    --bg-gradient-start: #1a1a1a;
+    --bg-gradient-end: #333333;
+    --container-bg: #2a2a2a;
+    --text-color: #e0e0e0;
+    --button-bg: #609dac;
+    --input-bg: #455a64;
+    --input-placeholder: #ddd;
+    --button-hover: #71b5c2;
+    --border-color: #666;
+    background: linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-color);
+}
+
+.dark-mode body {
+    background: var(--bg-gradient-start);
+}
+
+.dark-mode .container {
+    background-color: var(--container-bg);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+    color: var(--text-color);
+}
+
+.dark-mode .container p,
+.dark-mode .container a,
+.dark-mode .container span {
+    color: var(--text-color);
+}
+
+.dark-mode .container button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+}
+
+.dark-mode .container button.hidden {
+    background-color: transparent;
+    border-color: var(--text-color);
+}
+
+.dark-mode .container button:hover {
+    background-color: var(--button-hover);
+}
+
+.dark-mode .container input {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.dark-mode input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.dark-mode .social-icons a {
+    border-color: var(--border-color);
+}

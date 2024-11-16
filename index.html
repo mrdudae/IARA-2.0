@@ -7,13 +7,30 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="imagens/logo favicon (4).png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagens/logo favicon (3).png" type="image/x-icon">
 </head>
 <body>
+    <div class="privacy-policy-modal" id="privacy-modal">
+        <div class="modal-content">
+            <h2>Política de Privacidade</h2>
+            <p>Ao continuar a usar este site, você concorda com nossa política de privacidade.</p>
+            <div class="modal-buttons">
+                <button id="accept-btn">Aceitar</button>
+                <button id="reject-btn">Recusar</button>
+            </div>
+        </div>
+    </div>
     <nav class="navbar">
         <div class="navbar-container">
             <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
             <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <div class="switch">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <label for="darkModeToggle" class="slider">
+                  <span class="icon-sun">🌞</span>
+                  <span class="icon-moon">🌜</span>
+                </label>
+              </div>
             </div>
             <div class="nav-buttons" id="nav-buttons">
                 <a href="" style="margin-top: 30px;"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
@@ -137,8 +154,7 @@
         <br>
         <p class="animated-text">Além de fornecer informações sobre onde buscar ajuda, IARA oferece orientações detalhadas sobre direitos legais, ajudando os usuários a entenderem e aplicarem seus direitos caso decidam resolver seus problemas judicialmente. Nosso objetivo é enfrentar os desafios de discriminação, violência e injustiça, promovendo a inclusão e o respeito.</p>
         <br>
-        <p class="animated-text">Para garantir um suporte ainda mais completo, o projeto IARA inclui um botão de chat. Através desse chat, os usuários podem interagir com um chat bot especialmente treinado para oferecer auxílio imediato e informações relevantes. Além disso, é possível agendar consultas com psicólogos, proporcionando um atendimento psicológico adequado para as vítimas.
-                    </p>
+        <p class="animated-text">Para garantir um suporte ainda mais completo, o projeto IARA inclui um botão de chat. Através desse chat, os usuários podem interagir com um chat bot especialmente treinado para oferecer auxílio imediato e informações relevantes. Além disso, é possível agendar consultas com psicólogos, proporcionando um atendimento psicológico adequado para as vítimas. </p>
     </section>
 
     <section id="equipe" class="team-section">
@@ -177,6 +193,7 @@
     </div>
     
     <script src="script.js"></script>
+    <script src="tema.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

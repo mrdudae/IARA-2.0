@@ -268,3 +268,54 @@ textarea {
 }
 
 
+/* modo dark*/
+
+.dark-mode {
+  --yellow: #ffbd13;
+  --blue: #2350a0;
+  --blue-d-1: #193a7b;
+  --light: #333;
+  --grey: #555;
+  --white: #f0f0f0;
+  --shadow: 8px 8px 30px rgba(255, 255, 255, 0.1);
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .hero-section {
+  background: linear-gradient(135deg, rgb(33, 67, 89), rgba(33, 67, 89, 0.7));
+  color: #e0e0e0;
+}
+
+.dark-mode .wrapper {
+  background: #222;
+  color: #e0e0e0;
+  box-shadow: var(--shadow);
+}
+
+.dark-mode textarea {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .btn-group .btn.submit {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.dark-mode .btn-group .btn.cancel {
+  background: var(--light);
+  color: var(--blue);
+}
+
+.dark-mode .navbar {
+  background-color: rgb(33, 67, 89);
+}
+
+.dark-mode .nav-button {
+  color: #e0e0e0;
+}
+
+.dark-mode .nav-button:hover::after {
+  background-color: rgba(224, 224, 224, 0.8);
+}

@@ -14,7 +14,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #1e3a5f;
+    background-color: rgba(69, 142, 172, 0.7);
     color: white;
     padding: 20px;
     height: 100vh;
@@ -70,12 +70,12 @@ body {
 
 .topbar {
     width: 100%;
-    background-color: #ffffff;
+    background-color: rgb(69, 142, 172);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.573);
     position: fixed;
     top: 0;
     left: 0;
@@ -88,33 +88,49 @@ body {
     height: auto;
 }
 
-.topbar-search {
+.group {
     display: flex;
+    line-height: 28px;
     align-items: center;
-}
-
-.topbar-search input {
-    padding: 8px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+    position: relative;
+    max-width: 190px;
+  }
+  
+  .input {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 45px;
+    padding-left: 2.5rem;
+    border: 0;
+    border-radius: 12px;
+    background-color: rgb(69, 142, 172);
     outline: none;
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-.topbar-search input:focus {
-    border-color: #1b386d;
-}
-
-.topbar-search button {
-    padding: 8px;
-    background-color: #1b386d;
     color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-}
+  }
+  
+  .input::placeholder {
+    color: white;
+  }
+  
+  .input:hover {
+    box-shadow: 0 0 0 2.5px white, 0px 0px 25px -15px white;
+  }
 
+  
+  .input:focus {
+    box-shadow: 0 0 0 2.5px white;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    fill: white;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
 .back-button {
     display: none; /* Escondido por padrão */
 }
@@ -137,7 +153,7 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgb(69, 142, 172);
 }
 
 .chat-box {
@@ -254,3 +270,56 @@ body {
     }
 }
 
+/* Modo dark */
+
+.dark-mode {
+    background-color: #0d1524;
+    color: #d3d3d3;
+}
+
+.dark-mode .sidebar {
+    background-color: #14133a;
+    color: #d3d3d3;
+}
+
+.dark-mode .sidebar-nav ul li a {
+    color: #d3d3d3;
+}
+.dark-mode .input{
+    background-color: #14133a;
+}
+.dark-mode .topbar {
+    background-color: #1c1e3b;
+    color: #d3d3d3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.422);
+}
+
+.dark-mode .topbar-search input {
+    background-color: #1c1e3b;
+    border-color: white;
+}
+
+.dark-mode .back-button a {
+    color: #d3d3d3;
+}
+
+.dark-mode .chat-container {
+    background-color: #1e3a5f;
+    color: #d3d3d3;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .message-form input {
+    background-color: #1c1e3b;
+    color: #d3d3d3;
+    border-color: white;
+}
+
+.dark-mode .message.sent {
+    background-color: #3d629d;
+}
+
+.dark-mode .message.received {
+    background-color: #555;
+    color: #d3d3d3;
+}

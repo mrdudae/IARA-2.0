@@ -28,19 +28,13 @@ body {
     padding: 20px;
     background-color: #ffffff; 
 }
-
 .navbar {
-    display: flex;
     justify-content: center;
-    background-color: rgb(69, 142, 172);
+    background-color: rgb(69, 142, 172); 
     padding: 10px 0;
-    position: sticky;
-    top: auto;
-    z-index: 10;
     animation: slideDown 0.5s forwards;
-    font-family: 'Montserrat', sans-serif; /* Adiciona a fonte Montserrat */
+    font-family: 'Montserrat', sans-serif; 
 }
-
 .navbar-container {
     display: flex;
     align-items: center;
@@ -496,20 +490,314 @@ a {
         width: 90%; /* Ajusta a largura para que dois botões caibam lado a lado */
     }
 }
+                                              /*politica de privacidade */
+     .privacy-policy-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+    }
+    .modal-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+    }
+    .modal-buttons {
+        margin-top: 20px;
+    }
+    .modal-buttons button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .modal-buttons button:hover {
+        background-color: #0056b3;
+    }
+                                         /*button tema */
+.switch {
+    font-size: 17px;
+    position: relative;
+    margin-left: 30px;
+    display: inline-block;
+    width: 5em;
+    height: 2.5em;
+  }
+  
+  /* Esconde o checkbox HTML padrão */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* O slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  
+  /* O círculo (indicador) */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.8em;
+    width: 1.8em;
+    border-radius: 50%;
+    background-color: rgb(17, 14, 78);
+    transition: .4s;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+ 
+  .icon-sun, .icon-moon {
+    font-size: 1.2em;  
+    color: #fff;
+    transition: opacity 0.4s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Posição do ícone de sol */
+  .icon-sun {
+    left: 6px;
+    opacity: 1;
+  }
+  
+  /* Posição do ícone de lua */
+  .icon-moon {
+    right: 10px;
+    opacity: 0;
+  }
+  
+  /* Quando o input está marcado (modo dark) */
+  input:checked + .slider {
+    background-color: #5b92df;
+  }
+  
+  /* Quando o input está marcado, move o círculo e exibe o ícone da lua */
+  input:checked + .slider:before {
+    transform: translateX(2.5em) translateY(-50%);
+  }
+  
+  /* Mostra o ícone da lua quando o input está marcado */
+  input:checked + .slider .icon-moon {
+    opacity: 1;
+  }
+  
+  /* Esconde o ícone do sol quando o input está marcado */
+  input:checked + .slider .icon-sun {
+    opacity: 0;
+  }
+  
+  
 
-/* Ajustes no ícone do tema para ficar fixo */
-.theme-toggle-container {
-    position: fixed;
-    bottom: 20px; /* Ajusta para ficar na parte inferior */
-    right: 20px; /* Alinhado à direita */
-    z-index: 20;
+                                                /* Modo escuro */
+
+/* Corpo do site no modo escuro */
+body.dark-mode { 
+    background-color: rgb(13, 16, 33); /* Azul escuro */
+    color: rgb(220, 220, 220); /* Cor clara para o texto */
 }
-/* Ajustes para o botão de alternância do tema */
-#theme-toggle {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 17px; /* Distância da parte inferior */
-    right: 40px; /* Distância da parte direita */
-    z-index: 20;
+
+/* Estilo dos botões */
+.button-step {
+    background-color: #ffffff; /* Botões claros no modo padrão */
+    color: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Estilos para o botão no modo escuro */
+body.dark-mode .button-step {
+    background-color: #0d1524; /* Azul bem escuro para botões */
+    color: #ffffff;
+}
 
+/* Estilo da barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(69, 142, 172); /* Azul claro para o modo normal */
+    padding: 10px 0;
+    position: sticky;
+    top: auto;
+    z-index: 10;
+    animation: slideDown 0.5s forwards;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Modo escuro para a navbar */
+body.dark-mode .navbar {
+    background-color: #1c1e3b; /* Azul bem escuro */
+}
+
+/* Botões da navbar */
+.nav-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s;
+    font-size: 16px;
+    position: relative;
+}
+
+/* Modo escuro para botões da navbar */
+body.dark-mode .nav-button {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Efeito ao passar o mouse sobre os botões da navbar */
+body.dark-mode .nav-button:hover::after {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Seção hero */
+.hero-section {
+    background: linear-gradient(135deg, rgb(69, 142, 172), rgba(69, 142, 172, 0.7)); /* Azul claro no modo normal */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Modo escuro para a hero-section */
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #1c1e3b, #0d1524); /* Azul bem escuro */
+}
+
+/* Links e seções */
+.links-section {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Modo escuro para links */
+body.dark-mode .links-section {
+    background-color: #1c1e3b; /* Azul escuro */
+    color: rgb(220, 220, 220); /* Cor do texto mais clara */
+}
+
+body.dark-mode .modal-content{
+    background-color: #0d1524;
+
+}
+
+body.dark-mode .buttons-container{
+    background-color: rgb(9, 7, 32);
+}
+
+body.dark-mode .info-section{
+    background-color: #1c1e3b;
+}
+
+body.dark-mode .team-section{
+    background-color: #1c1e3b;
+}
+
+dark-mode
+
+.link-item {
+    min-width: 250px;
+    min-height: 350px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(69, 142, 172, 0.5); /* Azul claro no modo claro */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modo escuro para os links */
+body.dark-mode .link-item {
+    background-color: #1c1e3b; /* Azul escuro */
+    border-color: rgba(255, 255, 255, 0.3); /* Fronteira mais suave */
+    color: #ddd;
+}
+
+/* Rodapé */
+.footer {
+    background-color: rgb(69, 142, 172); /* Azul claro no modo normal */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Modo escuro para o rodapé */
+body.dark-mode .footer {
+    background-color: #1c1e3b; /* Azul escuro */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+}
