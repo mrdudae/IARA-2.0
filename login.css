@@ -65,7 +65,7 @@ body{
 }
 
 .container form{
-    background-color: #fff;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +135,7 @@ input::placeholder {
     --bg-gradient-end: #333333;
     --container-bg: #2a2a2a;
     --text-color: #e0e0e0;
-    --button-bg: #609dac;
+    --button-bg: #2b7488;
     --button-text-color: #fff;
     --input-bg: #455a64;
     --input-placeholder: #bbb;
