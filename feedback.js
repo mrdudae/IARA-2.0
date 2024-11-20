@@ -21,3 +21,47 @@ allStar.forEach((item, idx)=> {
 		}
 	})
 })
+
+//EmailJS
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("#feedback-form");
+
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const serviceID = "service_9h0t37q";
+            const templateID = "template_3rms49l";
+            const userID = "uS49NVh9eUKmq6H1l";
+
+            const rating = form.querySelector("input[name='rating']").value;
+            const opinion = form.querySelector("textarea[name='opinion']").value;
+
+            if (!rating || !opinion) {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            const templateParams = {
+                rating: rating,
+                opinion: opinion,
+            };
+
+            emailjs
+                .send(serviceID, templateID, templateParams, userID)
+                .then(
+                    function (response) {
+                        alert("Feedback enviado com sucesso!");
+                        console.log("Sucesso:", response);
+                    },
+                    function (error) {
+                        alert("Erro ao enviar feedback. Tente novamente.");
+                        console.error("Erro:", error);
+                    }
+                );
+        });
+    } else {
+        console.error("Formulário não encontrado.");
+    }
+});

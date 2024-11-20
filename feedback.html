@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="feedback.css">
-    <script src="https://kit.fontawesome.com/7f3f7c3c8e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="imagens/logo favicon (3).png" type="image/x-icon">
+    
+
+
 </head>
 <body>
    
@@ -32,7 +34,7 @@
 
     <div class="wrapper">
         <h3>Deixe seu feedback sobre o site!</h3>
-        <form action="#">
+        <form action="#" id="feedback-form">
             <div class="rating">
                 <input type="number" name="rating" hidden>
                 <i class='bx bx-star star' style="--i: 0;"></i>
@@ -46,9 +48,17 @@
                 <button type="submit" class="btn submit">Enviar</button>
                 <button class="btn cancel">Cancelar</button>
             </div>
-        </form>
+        </form>        
     </div>
-    <script src="feedback.js"></script> 
-    <script src="tema.js"></script> 
+    <script src="tema.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script>
+        (function() {
+            emailjs.init("uS49NVh9eUKmq6H1l"); 
+        })();
+    </script>
+        <script src="feedback.js"></script>    
 </body>
 </html>
