@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener("submit", function (event) {
             event.preventDefault();
 
-            const serviceID = "service_9h0t37q";
-            const templateID = "template_3rms49l";
-            const userID = "uS49NVh9eUKmq6H1l";
+            const serviceID = "service_afza78i";
+            const templateID = "template_ti3q96g";
+            const userID = "Pkq51nlEBKeeBWAv3";
 
             const rating = form.querySelector("input[name='rating']").value;
             const opinion = form.querySelector("textarea[name='opinion']").value;
