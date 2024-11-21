@@ -9,10 +9,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
-
 model User {
   id              Int       @id @default(autoincrement())
   name            String
@@ -20,7 +19,6 @@ model User {
   password        String
   googleLogin     String?   @unique
   facebookLogin   String?   @unique
-  linkedinLogin   String?   @unique
   address         Address?
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
@@ -44,4 +42,19 @@ model SupportLocation {
   state           String
   postalCode      String
   createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+model ChatBot {
+  id       Int     @id @default(autoincrement())
+  name     String
+  description String?
+  message Message[]
+}
+
+model Message {
+  id        Int     @id @default(autoincrement())
+  sender    String
+  createAt  DateTime @default(now())
+  chatbot   ChatBot @relation(fields: [chatbotId], references: [id])
+  chatbotId Int
 }
