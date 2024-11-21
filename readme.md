@@ -10,7 +10,7 @@
     </h4>
 </div>
 
-<h2>Colaboradoes</h2>
+<h2>Colaboradores</h2>
  
 | Colaboradores        |  Link do Github                                                               |
 |--------------|----------------------------------------------------------------------|
