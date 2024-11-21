@@ -1,7 +1,7 @@
 
 <div align="center">
   <h1> Sistema IARA </h1>
-  <img src="https://github.com/user-attachments/assets/e457aa1b-8394-4a29-bfcf-20e6082ed119" alt="logo iara" width="520" />
+  <img src="https://github.com/user-attachments/assets/e457aa1b-8394-4a29-bfcf-20e6082ed119" alt="logo iara" width="350" />
 </div>
 
 <div style="text-align: justify; max-width: 600px;">
