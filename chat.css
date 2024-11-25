@@ -26,7 +26,10 @@ body {
     gap: 20px;
     transition: transform 0.3s ease-in-out;
 }
-
+#message-input::placeholder {
+    color: black; 
+    font-style: italic; 
+}
 .sidebar-header {
     display: flex;
     justify-content: center;
@@ -88,49 +91,6 @@ body {
     height: auto;
 }
 
-.group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-  }
-  
-  .input {
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    height: 45px;
-    padding-left: 2.5rem;
-    border: 0;
-    border-radius: 12px;
-    background-color: rgb(69, 142, 172);
-    outline: none;
-    color: white;
-  }
-  
-  .input::placeholder {
-    color: white;
-  }
-  
-  .input:hover {
-    box-shadow: 0 0 0 2.5px white, 0px 0px 25px -15px white;
-  }
-
-  
-  .input:focus {
-    box-shadow: 0 0 0 2.5px white;
-  }
-  
-  .search-icon {
-    position: absolute;
-    left: 1rem;
-    fill: white;
-    width: 1rem;
-    height: 1rem;
-    pointer-events: none;
-    z-index: 1;
-  }
-  
 .back-button {
     display: none; /* Escondido por padrão */
 }
@@ -177,15 +137,15 @@ body {
 }
 
 .message-form input {
-    width: 100%; /* O campo de entrada ocupa toda a largura disponível */
+    width: 100%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
     outline: none;
     font-size: 14px;
-    resize: none; /* Impede o redimensionamento da caixa de texto */
-    overflow: visible; /* Garante que o campo de entrada não tenha rolagem */
-    height: 40px; /* Definindo uma altura fixa para o campo de entrada */
+    resize: none; 
+    overflow: visible; 
+    height: 40px; 
 }
 
 .message-form input:focus {
@@ -193,7 +153,7 @@ body {
 }
 
 .message-form button { 
-    background-color: #1b386d;
+    background-color: rgb(69, 142, 172);
     font-size: 15px;
     color: white;
     border: none;
@@ -219,18 +179,20 @@ body {
     font-size: 14px;
     opacity: 0;
     animation: fadeIn 0.3s forwards;
-    white-space: pre-wrap; /* Quebra de linha automática */
+    white-space: pre-wrap; 
     word-wrap: break-word;
 }
 .message.sent {
-    background-color: #1b386d;
+    background-color: #446bb2;
     color: white;
     align-self: flex-end;
+    font-size: 18px;
 }
 
 .message.received {
-    background-color: #cadaee;
-    color: black;
+    background-color: #7ba3d3;
+    color: white;
+    font-size: 18px;
 }
 
 
@@ -263,17 +225,17 @@ body {
 
     .chat-container {
         margin: auto; /* Centralizar o chat no modo celular */
-        width: 90%; /* Aumenta a largura do chat */
+        width: 80%; /* Aumenta a largura do chat */
         max-width: 600px;
-        margin-top: 40%;
-        height: 65vh; /* Aumenta a altura do chat */
+        margin-top: 20%;
+        height: 80vh; /* Aumenta a altura do chat */
     }
 }
 
 /* Modo dark */
 
 .dark-mode {
-    background-color: #315594;
+    background-color: #061530;
     color: #d3d3d3;
 }
 
@@ -289,7 +251,7 @@ body {
     background-color: #14133a;
 }
 .dark-mode .topbar {
-    background-color: #3b75e0;
+    background-color: #0f2c61;
     color: #d3d3d3;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.422);
 }
@@ -304,13 +266,13 @@ body {
 }
 
 .dark-mode .chat-container {
-    background-color: #3b75e0;
+    background-color: #21488f;
     color: #d3d3d3;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(13, 13, 13, 0.1);
 }
 
 .dark-mode .message-form input {
-    background-color: #3b75e0;
+    background-color: #21488f;
     color: #d3d3d3;
     border-color: white;
 }
@@ -323,3 +285,10 @@ body {
     background-color: #5882cf;
     color: #d3d3d3;
 }
+.dark-mode .sidebar-nav ul li a:hover {
+    color: #123370;
+}
+.dark-mode #message-input::placeholder{ 
+      color: white; 
+}
+  
