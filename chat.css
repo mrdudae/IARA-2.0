@@ -138,7 +138,7 @@ body {
 .back-button a {
     text-decoration: none;
     color: #1e3a5f;
-    font-size: 24px; /* Aumentar o tamanho da fonte */
+    font-size: 24px; 
     font-weight: bold;
 }
 
@@ -146,7 +146,7 @@ body {
     margin-left: 40%;
     margin-top: 8%;
     width: 600px; /* Aumenta a largura do chat */
-    height: 600px; /* Permite que a altura do contêiner do chat se ajuste automaticamente */
+    height: 800px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -273,12 +273,12 @@ body {
 /* Modo dark */
 
 .dark-mode {
-    background-color: #0d1524;
+    background-color: #315594;
     color: #d3d3d3;
 }
 
 .dark-mode .sidebar {
-    background-color: #14133a;
+    background-color: #0f264f;
     color: #d3d3d3;
 }
 
@@ -289,13 +289,13 @@ body {
     background-color: #14133a;
 }
 .dark-mode .topbar {
-    background-color: #1c1e3b;
+    background-color: #3b75e0;
     color: #d3d3d3;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.422);
 }
 
 .dark-mode .topbar-search input {
-    background-color: #1c1e3b;
+    background-color: #3b75e0;
     border-color: white;
 }
 
@@ -304,22 +304,22 @@ body {
 }
 
 .dark-mode .chat-container {
-    background-color: #1e3a5f;
+    background-color: #3b75e0;
     color: #d3d3d3;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 .dark-mode .message-form input {
-    background-color: #1c1e3b;
+    background-color: #3b75e0;
     color: #d3d3d3;
     border-color: white;
 }
 
 .dark-mode .message.sent {
-    background-color: #3d629d;
+    background-color: #1e4999;
 }
 
 .dark-mode .message.received {
-    background-color: #555;
+    background-color: #5882cf;
     color: #d3d3d3;
 }

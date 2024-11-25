@@ -622,7 +622,7 @@ a {
 
 /* Corpo do site no modo escuro */
 body.dark-mode { 
-    background-color: rgb(13, 16, 33); /* Azul escuro */
+    background-color: rgb(13, 19, 33); /* Azul escuro */
     color: rgb(220, 220, 220); /* Cor clara para o texto */
 }
 
@@ -657,7 +657,7 @@ body.dark-mode .button-step {
 
 /* Modo escuro para a navbar */
 body.dark-mode .navbar {
-    background-color: #1c1e3b; /* Azul bem escuro */
+    background-color: #1c253b; /* Azul bem escuro */
 }
 
 /* Botões da navbar */
@@ -695,7 +695,7 @@ body.dark-mode .nav-button:hover::after {
 
 /* Modo escuro para a hero-section */
 body.dark-mode .hero-section {
-    background: linear-gradient(135deg, #1c1e3b, #0d1524); /* Azul bem escuro */
+    background: linear-gradient(135deg, #1c2a3b, #0d1524); /* Azul bem escuro */
 }
 
 /* Links e seções */
@@ -706,7 +706,7 @@ body.dark-mode .hero-section {
 
 /* Modo escuro para links */
 body.dark-mode .links-section {
-    background-color: #1c1e3b; /* Azul escuro */
+    background-color: #1c2b3b; /* Azul escuro */
     color: rgb(220, 220, 220); /* Cor do texto mais clara */
 }
 
@@ -716,15 +716,15 @@ body.dark-mode .modal-content{
 }
 
 body.dark-mode .buttons-container{
-    background-color: rgb(9, 7, 32);
+    background-color: rgb(7, 15, 32);
 }
 
 body.dark-mode .info-section{
-    background-color: #1c1e3b;
+    background-color: #1c263b;
 }
 
 body.dark-mode .team-section{
-    background-color: #1c1e3b;
+    background-color: #1c263b;
 }
 
 
@@ -744,7 +744,7 @@ dark-mode
 
 /* Modo escuro para os links */
 body.dark-mode .link-item {
-    background-color: #1c1e3b; /* Azul escuro */
+    background-color: #1c293b; /* Azul escuro */
     border-color: rgba(255, 255, 255, 0.3); /* Fronteira mais suave */
     color: #ddd;
 }
@@ -759,7 +759,7 @@ body.dark-mode .link-item {
 
 /* Modo escuro para o rodapé */
 body.dark-mode .footer {
-    background-color: #1c1e3b; /* Azul escuro */
+    background-color: #1c293b; /* Azul escuro */
 }
 
 /* Animações */
