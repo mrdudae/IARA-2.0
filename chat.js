@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Função para enviar mensagem ao bot via API
     async function sendMessage(message) {
         try {
-            const response = await fetch('http://localhost:9000/mensagens/', {
+            const response = await fetch('https://back-end-iara.onrender.com/mensagens/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json; charset=UTF-8' },
                 body: JSON.stringify({ mensagem: message }),
