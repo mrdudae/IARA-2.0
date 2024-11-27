@@ -683,6 +683,10 @@ body.dark-mode .nav-button:hover::after {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+body.dark-mode .nav-buttons{
+   background-color: #1c263b;
+}
+
 /* Seção hero */
 .hero-section {
     background: linear-gradient(135deg,     rgb(69, 142, 172), rgba(69, 142, 172, 0.7)); /* Azul claro no modo normal */
