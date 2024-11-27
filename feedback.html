@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="feedback.css">
     <link rel="shortcut icon" href="imagens/logo favicon (3).png" type="image/x-icon">
-    
-
-
 </head>
 <body>
-   
-        <nav class="navbar">
-            <div class="navbar-container">
-                <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
-                <div class="menu-icon" id="menu-icon">
-                </div>
-                <div class="nav-buttons" id="nav-buttons">
-                    <a href="index.html" ><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
-                    <a href="feedback.html"><button class="nav-button" onclick="scrollToSection('voluntario')">Feedback</button></a>
-                    <a href="https://wa.me/+5585999059763" target="_blank"><button class="nav-button" onclick="scrollToSection('sla')">Suporte</button></a>
-                </div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+            <div class="menu-icon" id="menu-icon">
+                <i class='bx bx-menu'></i>
             </div>
-        </nav>
-        <header class="hero-section">
-            <div class="hero-content">
-                <h1 class="animated-title">Dê o seu feedback</h1>
-                <p class="animated-description">Espero que tenha gostado</p>
+            <div class="nav-buttons" id="nav-buttons">
+                <a href="index.html"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
+                <a href="feedback.html"><button class="nav-button" onclick="scrollToSection('voluntario')">Feedback</button></a>
+                <a href="https://wa.me/+5585999059763" target="_blank"><button class="nav-button" onclick="scrollToSection('sla')">Suporte</button></a>
             </div>
-        </header>
-
+        </div>
+    </nav>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="animated-title">Dê o seu feedback</h1>
+            <p class="animated-description">Espero que tenha gostado</p>
+        </div>
+    </header>
     <div class="wrapper">
         <h3>Deixe seu feedback sobre o site!</h3>
         <form action="#" id="feedback-form">
@@ -51,14 +47,12 @@
         </form>        
     </div>
     <script src="tema.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("uS49NVh9eUKmq6H1l"); 
+            emailjs.init("uS49NVh9eUKmq6H1l");
         })();
     </script>
-        <script src="feedback.js"></script>    
+    <script src="feedback.js"></script>
 </body>
 </html>

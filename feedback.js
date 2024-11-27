@@ -65,3 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Formulário não encontrado.");
     }
 });
+
+
+document.getElementById('menu-icon').addEventListener('click', function() {
+    var navButtons = document.getElementById('nav-buttons');
+    navButtons.classList.toggle('active');
+});
