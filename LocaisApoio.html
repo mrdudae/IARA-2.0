@@ -1,45 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locais Próximos</title>
+    <title>Locais de Apoio LGBT</title>
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="LocaisApoio.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-logo">
-                Projeto IARA
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <div class="switch">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <label for="darkModeToggle" class="slider">
+                  <span class="icon-sun">🌞</span>
+                  <span class="icon-moon">🌜</span>
+                </label>
+              </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#apoio">Apoio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <h1>Locais Próximos</h1>
+            <div class="nav-buttons" id="nav-buttons">
+                <a href="index.html" style="margin-top: 30px;"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
+                <a href="feedback.html" style="margin-top: 30px;"><button class="nav-button" onclick="scrollToSection('voluntario')">Feedback</button></a>
+                <a href="https://wa.me/+5585999059763" style="margin-top: 30px;" target="_blank"><button class="nav-button" onclick="scrollToSection('sla')">Suporte</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Locais de Apoio</h1>
+        </div>
     </header>
-    <main>
-        <div id="location-form">
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" placeholder="Ex: 01001-000">
-            <button id="submit-location">Atualizar Localização</button>
-        </div>
-        <div id="locations">
-            <div class="location left">
-                <img src="local1.jpg" alt="Local 1">
-                <p>Local de Apoio 1</p>
-                <p>Descrição do local de apoio 1.</p>
+
+    <section id="locais-apoio" class="location-section">
+        <div class="location-list">
+            <div class="location-item">
+                <h4>Centro de Referência da Mulher</h4>
+                <p>Oferece atendimento especializado para mulheres em situação de violência.</p>
             </div>
-            <div class="location right">
-                <img src="local2.jpg" alt="Local 2">
-                <p>Local de Apoio 2</p>
-                <p>Descrição do local de apoio 2.</p>
+            <div class="location-item">
+                <h4>Associação Brasileira de Luta contra a Aids (ABLA)</h4>
+                <p>Atendimento especializado para pessoas LGBT+ e portadoras de HIV/AIDS.</p>
+            </div>
+            <div class="location-item">
+                <h4>Disque 180 (Central de Atendimento à Mulher)</h4>
+                <p>Serviço de atendimento 24h para denúncias de violência contra a mulher.</p>
+            </div>
+            <div class="location-item">
+                <h4>Coletivo Feminista Sexualidade e Saúde (CFSS)</h4>
+                <p>ONG que oferece apoio jurídico e psicológico para mulheres vítimas de violência.</p>
+            </div>
+            <div class="location-item">
+                <h4>Instituto LGBTQIA+</h4>
+                <p>ONG de apoio a pessoas LGBT+ vítimas de discriminação e violência.</p>
+            </div>
+            <div class="location-item">
+                <h4>Projeto Legal de Aconselhamento Jurídico</h4>
+                <p>Assistência jurídica gratuita para pessoas em situação de vulnerabilidade.</p>
+            </div>
+            <div class="location-item">
+                <h4>Serviço de Atendimento a Vítimas de Feminicídio (SAVF)</h4>
+                <p>Atendimento e suporte jurídico para familiares de vítimas de feminicídios.</p>
             </div>
         </div>
-    </main>
-    <script src="locaisdeapoio.js"></script>
+    </section>    
+
+    <script src="tema.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("uS49NVh9eUKmq6H1l");
+        })();
+    </script>
+    <script src="feedback.js"></script> 
 </body>
 </html>
