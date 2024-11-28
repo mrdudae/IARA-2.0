@@ -1,4 +1,3 @@
-/* Estilos globais */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -187,6 +186,97 @@ textarea {
   margin-left: auto; /* Mover para a extremidade direita */
 }
 
+.switch {
+  font-size: 17px;
+  position: relative;
+  margin-left: 30px;
+  display: inline-block;
+  width: 5em;
+  height: 2.5em;
+}
+
+/* Esconde o checkbox HTML padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* O slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+/* O círculo (indicador) */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.8em;
+  width: 1.8em;
+  border-radius: 50%;
+  background-color: rgb(17, 14, 78);
+  transition: .4s;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.icon-sun, .icon-moon {
+  font-size: 1.2em;  
+  color: #fff;
+  transition: opacity 0.4s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Posição do ícone de sol */
+.icon-sun {
+  left: 6px;
+  opacity: 1;
+}
+
+/* Posição do ícone de lua */
+.icon-moon {
+  right: 10px;
+  opacity: 0;
+}
+
+/* Quando o input está marcado (modo dark) */
+input:checked + .slider {
+  background-color: #5b92df;
+}
+
+/* Quando o input está marcado, move o círculo e exibe o ícone da lua */
+input:checked + .slider:before {
+  transform: translateX(2.5em) translateY(-50%);
+}
+
+/* Mostra o ícone da lua quando o input está marcado */
+input:checked + .slider .icon-moon {
+  opacity: 1;
+}
+
+/* Esconde o ícone do sol quando o input está marcado */
+input:checked + .slider .icon-sun {
+  opacity: 0;
+}
+
+
+
 .nav-buttons {
   display: flex;
   gap: 10px;
@@ -247,8 +337,8 @@ textarea {
     gap: 0;
     background-color: rgb(69, 142, 172);
     position: absolute;
-    top: 100px;
-    right: 40px;
+    top: 10zz0px;
+    right: 0px;
     width: 30%; /* Largura reduzida */
     padding: 10px 0;
   }
@@ -293,11 +383,9 @@ textarea {
   color: #e0e0e0;
 }
 
-.dark-mode .hero-section {
-  background: linear-gradient(135deg, rgb(33, 67, 89), rgba(33, 67, 89, 0.7));
-  color: #e0e0e0;
+body.dark-mode .hero-section {
+  background: linear-gradient(135deg, #1c2a3b, #0d1524);
 }
-
 .dark-mode .wrapper {
   background: #222;
   color: #e0e0e0;
@@ -319,8 +407,8 @@ textarea {
   color: var(--blue);
 }
 
-.dark-mode .navbar {
-  background-color: rgb(33, 67, 89);
+body.dark-mode .navbar {
+  background-color: #1c253b;
 }
 
 .dark-mode .nav-button {
