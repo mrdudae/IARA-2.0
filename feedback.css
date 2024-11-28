@@ -387,7 +387,7 @@ body.dark-mode .hero-section {
   background: linear-gradient(135deg, #1c2a3b, #0d1524);
 }
 .dark-mode .wrapper {
-  background: #222;
+  background: linear-gradient(135deg, #1c2a3b, #0d1524);
   color: #e0e0e0;
   box-shadow: var(--shadow);
 }
