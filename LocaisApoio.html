@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <img src="imagens/logo favicon (3).png" alt="Logo do Projeto" class="logo">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <div class="switch">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <label for="darkModeToggle" class="slider">
+                  <span class="icon-sun">🌞</span>
+                  <span class="icon-moon">🌜</span>
+                </label>
+              </div>
+            </div>
+            <div class="nav-buttons" id="nav-buttons">
+                <a href="index.html" style="margin-top: 30px;"><button class="nav-button" onclick="scrollToSection('sobre')">Home</button></a>
+                <a href="feedback.html" style="margin-top: 30px;"><button class="nav-button" onclick="scrollToSection('voluntario')">Feedback</button></a>
+                <a href="https://wa.me//+5585999059763" style="margin-top: 30px;"><button class="nav-button" onclick="scrollToSection('voluntario')">Suporte</button></a>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1 class="animated-title">Bem-vindo ao Projeto IARA</h1>
+            <p class="animated-description">Apoio e proteção a pessoas vítimas de violência.</p>
+        </div>
+    </header>
+
+    <div class="local right">
+        <div>
+            <h1>Local de Apoio 2</h1>
+            <p>O segundo local de apoio oferece serviços especializados e atendimento contínuo para quem precisa. Visite-nos para mais informações.</p>
+        </div>
+        <img src="https://via.placeholder.com/300" alt="Local 2">
+    </div>
+
+    <div class="local left">
+        <img src="https://via.placeholder.com/300" alt="Local 3">
+        <div>
+            <h1>Local de Apoio 3</h1>
+            <p>Este local está dedicado ao apoio psicológico e ao bem-estar. Oferecemos um ambiente acolhedor e profissionais preparados para ajudar.</p>
+        </div>
+    </div>
+
+    <div class="local right">
+        <div>
+            <h1>Local de Apoio 4</h1>
+            <p>Com foco na assistência social, este local de apoio visa atender pessoas em situação de vulnerabilidade com apoio contínuo.</p>
+        </div>
+        <img src="https://via.placeholder.com/300" alt="Local 4">
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+    <script src="tema.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
