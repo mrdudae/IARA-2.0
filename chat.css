@@ -107,7 +107,7 @@ body {
     margin-left: 40%;
     margin-top: 8%;
     width: 600px; /* Aumenta a largura do chat */
-    height: 800px; 
+    height: 600px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -228,7 +228,7 @@ body {
         margin: auto; /* Centralizar o chat no modo celular */
         width: 80%; /* Aumenta a largura do chat */
         max-width: 600px;
-        margin-top: 30%;
+        margin-top: 40%;
         height: 70vh; /* Aumenta a altura do chat */
     }
 }
