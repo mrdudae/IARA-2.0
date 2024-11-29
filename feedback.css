@@ -337,9 +337,9 @@ input:checked + .slider .icon-sun {
     gap: 0;
     background-color: rgb(69, 142, 172);
     position: absolute;
-    top: 10zz0px;
+    top: -30px;
     right: 0px;
-    width: 30%; /* Largura reduzida */
+    width: 25%; /* Largura reduzida */
     padding: 10px 0;
   }
 
@@ -417,4 +417,7 @@ body.dark-mode .navbar {
 
 .dark-mode .nav-button:hover::after {
   background-color: rgba(224, 224, 224, 0.8);
+}
+body.dark-mode .nav-buttons {
+  background-color: #1c263b;
 }
