@@ -541,8 +541,7 @@ a {
     width: 0;
     height: 0;
   }
-  
-  /* O slider */
+
   .slider {
     position: absolute;
     cursor: pointer;
@@ -597,7 +596,7 @@ a {
   
   /* Quando o input está marcado (modo dark) */
   input:checked + .slider {
-    background-color: #5b92df;
+    background-color: rgba(255, 255, 255, 0.641);
   }
   
   /* Quando o input está marcado, move o círculo e exibe o ícone da lua */

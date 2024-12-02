@@ -339,7 +339,7 @@ input:checked + .slider .icon-sun {
     position: absolute;
     top: -30px;
     right: 0px;
-    width: 25%; /* Largura reduzida */
+    width: 20%; /* Largura reduzida */
     padding: 10px 0;
   }
 
