@@ -100,6 +100,7 @@ body {
     padding: 50px 20px;
     position: relative;
     overflow: hidden;
+    font-size: 20px;
 }
 
 .hero-content {
@@ -128,15 +129,59 @@ body {
 .button-step {
     background-color: white;
     color: rgb(69, 142, 172);
-    padding: 15px;
+    padding: 50px; /* Aumenta o padding para mais espaço interno */
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px; /* Bordas mais arredondadas */
     width: 45%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    min-height: 300px; /* Altura mínima aumentada */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra mais proeminente */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adiciona transição à sombra */
     text-align: center;
     animation: fadeIn 1.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.button-step:hover {
+    transform: translateY(-5px); /* Adiciona um efeito de elevação no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.animated-subtitle {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    margin-bottom: 15px; /* Adiciona espaçamento abaixo do título */
+    color: rgb(34, 87, 120); /* Cor do título */
+}
+
+.animated-text {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do texto */
+    margin-bottom: 20px; /* Espaçamento entre o texto e o botão */
+    color: rgb(50, 100, 150); /* Cor do texto */
+}
+
+.action-button {
+    background-color: rgb(69, 142, 172);
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Aumenta o padding para um botão maior */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.action-button:hover {
+    background-color: rgb(50, 120, 150); 
+    transform: scale(1.05);
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .button-step {
+        width: 100%;
+    }
+}
+
 /* Noticias css */
 
 .links-section { 
@@ -167,7 +212,7 @@ body {
 .links-container {
     display: flex;
     overflow-x: auto; /* Permite rolagem horizontal */
-    scroll-behavior: smooth; /* Suaviza a rolagem */
+    scroll-behavior: smooth/* Cor de fundo diferente no hover */; /* Suaviza a rolagem */
     padding: 10px 0;
 }
 
@@ -270,25 +315,47 @@ body {
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
+    font-size: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 2s;
 }
-.animated-list {
-    opacity: 0;
-    animation: fadeIn 2.2s forwards;
+
+.section-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .section-image {
     max-width: 20%;
     height: auto;
     border-radius: 5px;
-    margin: 15px auto; /* Muda o margin para auto */
-    display: block; /* Faz a imagem ser um bloco */
     animation: slideIn 0.5s forwards;
 }
 
-.animated-text{
-    font-size: 23px;
+.text-content {
+    max-width: 75%;
+}
+
+.animated-text {
+    animation: fadeIn 2.2s forwards;
+    opacity: 0;
+}
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-image {
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
 }
 /* Estilo para a seção da equipe */
 .team-section {
